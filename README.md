@@ -104,7 +104,12 @@ Details and how each was measured: step 8 and *Numbers*.
   subcategories down, plus the English and Swedish articles on the same topics. The list and the
   category tree ship in this repo (`data/*.tsv`), so nobody has to walk the categories again.
 - **A gap to know about:** some central people are not in the set — *Mannerheim*, *Kekkonen*,
-  *Ståhlberg*. Their articles sit in categories more than three levels below *Suomen historia*.
+  *Ståhlberg*, *Paasikivi*, *Svinhufvud*. Famous people have their own category (*Luokka:Urho
+  Kekkonen*), and their article sits inside it — one level deeper than we walk. Walking one more
+  level would add ~1,260 categories and up to ~26,600 articles, mostly lists of politicians, city
+  councillors and officers (and the band *Nightwish*): it would double the set and dilute it.
+  Taking only the main article of each such named category would add 458 articles, including
+  these five presidents. *(to do)*
 - **Which text:** [FineWiki](https://huggingface.co/datasets/HuggingFaceFW/finewiki) (August
   2025). Clean Markdown made from Wikipedia's rendered pages: templates filled in, no wiki markup
   noise. Raw wikitext would put `{{Infobox …}}` and reference syntax into the vectors.
