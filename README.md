@@ -16,8 +16,7 @@ database, and one SQL statement does the semantic search. No separate vector dat
 
 ![The search page: an English question finds the right treaty, with its Finnish and Swedish versions](docs/search-page.jpg)
 
-Built for the [Junction 2026](https://www.hackjunction.com/) challenge *Wikipedia Through Time*,
-as the example for the RAG track. The data is the *History of Finland* set (dataset **S**):
+Built as an example for doing RAG with MariaDB Vector. The data is the *History of Finland* set:
 28,345 articles: 18,859 Finnish, and the 4,904 English and 4,582 Swedish articles on the same
 topics. 2,615 topics exist in all three languages.
 
