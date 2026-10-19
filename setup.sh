@@ -24,7 +24,8 @@ if [ "$1" = "--local" ]; then
   .venv/bin/python -c "
 from common import connect
 con = connect(); cur = con.cursor()
-for statement in open('schema.sql').read().split(';'):
+sql = ''.join(l for l in open('schema.sql') if not l.lstrip().startswith('--'))
+for statement in sql.split(';'):
     if statement.strip(): cur.execute(statement)"
 else
   echo "3/4  MariaDB in Docker"
