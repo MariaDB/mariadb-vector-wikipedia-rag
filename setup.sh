@@ -17,20 +17,15 @@ echo "1/4  Python packages"
 .venv/bin/pip install -q -r requirements.txt
 
 echo "2/4  Embedding model bge-m3 (1.2 GB, once)"
-ollama pull bge-m3 >/dev/null
+ollama pull bge-m3 >/dev/null 2>&1 || { echo "ollama pull failed. Is Ollama running? Start it from the menu bar or with: ollama serve"; exit 1; }
 
-if [ "$1" = "--local" ]; then
-  echo "3/4  Tables in your own MariaDB"
-  .venv/bin/python -c "
-from common import connect
-con = connect(); cur = con.cursor()
-sql = ''.join(l for l in open('schema.sql') if not l.lstrip().startswith('--'))
-for statement in sql.split(';'):
-    if statement.strip(): cur.execute(statement)"
-else
-  echo "3/4  MariaDB in Docker"
+if [ "$1" != "--local" ]; then
+  echo "3/4  MariaDB in Docker, and the tables"
   docker compose up -d --wait
+else
+  echo "3/4  The tables, in your own MariaDB"
 fi
+.venv/bin/python create_tables.py
 
 echo "4/4  Articles, categories and vectors (downloads 110 MB the first time)"
 .venv/bin/python load.py --vectors

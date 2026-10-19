@@ -1,5 +1,7 @@
 # MariaDB for Wikipedia RAG with MariaDB Vector. Start:  docker compose up -d --wait
 # Ollama is not in here on purpose: run it on your machine so it can use the GPU.
+# The tables are created by create_tables.py (setup.sh runs it), not mounted into the container:
+# Docker on a Mac may not see files outside your home folder.
 services:
   mariadb:
     image: mariadb:lts
@@ -11,7 +13,6 @@ services:
     ports:
       - "3307:3306"     # 3307 on your machine, so it does not collide with a local MariaDB on 3306
     volumes:
-      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
       - wikirag-data:/var/lib/mysql
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
