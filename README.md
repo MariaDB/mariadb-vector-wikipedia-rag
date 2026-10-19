@@ -21,6 +21,10 @@ Wikipedia (a small dataset relative to the entire Finnish Wikipedia of over 500k
 29,460 articles — 19,285 Finnish, and the 5,254 English and 4,921 Swedish articles on the same
 topics. 2,919 topics exist in all three languages.
 
+Its companion, [mariadb-system-versioning-wikipedia](https://github.com/robertsilen/mariadb-system-versioning-wikipedia),
+keeps every version of these articles in a system-versioned table: what did Wikipedia say on a
+given day?
+
 ## Quick start
 
 You need Python 3.11+, [Ollama](https://ollama.com/download) running, and Docker. Then:
