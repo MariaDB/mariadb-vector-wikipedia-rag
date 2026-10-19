@@ -1,0 +1,61 @@
+
+## vector search — 32 questions, 5 runs each
+
+| Questions | n | hit@1 | hit@5 | hit@10 | MRR |
+|---|---|---|---|---|---|
+| all |  32 |   62% |   81% |   94% | 0.72 |
+| in en |  11 |   64% |   82% |   91% | 0.72 |
+| in sv |  10 |   80% |   80% |  100% | 0.83 |
+| in fi |  11 |   45% |   82% |   91% | 0.61 |
+| answer only in Finnish |   4 |  100% |  100% |  100% | 1.00 |
+
+Embedding the question: median 36 ms, slowest 46 ms
+SQL query: median 22.8 ms, slowest 35.5 ms
+
+Not in the top 5:
+- [en] The 1918 war between the Reds and the Whites in Finland → expected Suomen sisällissota, rank >10, top result: Battle of Vilppula
+- [en] Finland as an autonomous part of the Russian Empire → expected Suomen suuriruhtinaskunta, rank 8, top result: Finlands historia
+- [sv] Kriget då Sverige förlorade Finland till Ryssland 1808–1809 → expected Suomen sota, rank 9, top result: Battle of Lapua
+- [sv] Området nära Helsingfors som arrenderades ut till Sovjetunionen efter kriget → expected Porkkalan vuokra-alue, rank 7, top result: Moscow Armistice
+- [fi] Karjalasta evakuoidut ihmiset sotien jälkeen → expected Siirtoväki, rank 6, top result: Luovutettu Karjala
+- [fi] Keisarin julistus vuonna 1899, joka rajoitti Suomen autonomiaa → expected Helmikuun manifesti, rank >10, top result: Rauhoitusreskripti
+
+## keyword search — 32 questions, 5 runs each
+
+| Questions | n | hit@1 | hit@5 | hit@10 | MRR |
+|---|---|---|---|---|---|
+| all |  32 |   12% |   19% |   44% | 0.17 |
+| in en |  11 |   18% |   18% |   45% | 0.22 |
+| in sv |  10 |    0% |   10% |   40% | 0.06 |
+| in fi |  11 |   18% |   27% |   45% | 0.22 |
+| answer only in Finnish |   4 |    0% |    0% |    0% | 0.00 |
+
+SQL query: median 16.3 ms, slowest 92.0 ms
+
+Not in the top 5:
+- [en] When did Finland declare its independence? → expected Suomen itsenäisyysjulistus, rank >10, top result: Finland at the 1912 Summer Olympics
+- [en] Which peace treaty ended the Winter War? → expected Moskovan rauhansopimus (1940), rank >10, top result: Winter War
+- [en] Defensive line on the Karelian Isthmus named after the commander-in-chief → expected Mannerheim-linja, rank 7, top result: Winter War
+- [en] Finland as an autonomous part of the Russian Empire → expected Suomen suuriruhtinaskunta, rank 8, top result: Anti-Russian sentiment
+- [en] The Russian occupation of Finland during the Great Northern War → expected Isoviha, rank >10, top result: Anti-Russian sentiment
+- [en] Peasant uprising in Ostrobothnia in the 1590s → expected Nuijasota, rank 8, top result: Peasant
+- [en] The attempt to assassinate Mannerheim in 1920 → expected Mannerheimin murhayritys 1920, rank >10, top result: Winter War
+- [en] A revolt of crofters at Kuorsumaa → expected Kuorsumaan torpparikapina, rank >10, top result: Kronstadt rebellion
+- [en] Trial of electronic voting in the 2008 municipal elections → expected Sähköisen äänestyksen kokeilu kunnallisvaaleissa 2008, rank >10, top result: Suomen vaalirahoituskohu
+- [sv] Kriget mot de tyska trupperna i Lappland 1944–1945 → expected Lapin sota, rank 8, top result: Slaget vid Helsingborg
+- [sv] Fredsavtalet mellan Finland och Sovjetryssland i Dorpat 1920 → expected Tarton rauha, rank >10, top result: Slaget vid Poltava
+- [sv] Tvisten om Ålands ställning i Nationernas förbund → expected Ahvenanmaan kysymys, rank >10, top result: Ålands historia
+- [sv] Avtalet om vänskap, samarbete och ömsesidigt bistånd med Sovjetunionen → expected YYA-sopimus, rank 8, top result: Georg Carl von Döbeln
+- [sv] Kriget då Sverige förlorade Finland till Ryssland 1808–1809 → expected Suomen sota, rank 8, top result: Georg Carl von Döbeln
+- [sv] Det finska kavalleriet under trettioåriga kriget → expected Hakkapeliitat, rank >10, top result: Slaget vid Poltava
+- [sv] Den stora branden i Åbo 1827 → expected Turun palo, rank >10, top result: Georg Carl von Döbeln
+- [sv] Ståndslantdagen 1882 → expected Säätyvaltiopäivät 1882, rank >10, top result: Luettelo Suomen senaattoreista
+- [sv] Området nära Helsingfors som arrenderades ut till Sovjetunionen efter kriget → expected Porkkalan vuokra-alue, rank >10, top result: Georg Carl von Döbeln
+- [fi] Suomen talouskriisi 1990-luvun alussa → expected Suomen 1990-luvun alun lama, rank 10, top result: Suomi 1990-luvulla
+- [fi] Karjalasta evakuoidut ihmiset sotien jälkeen → expected Siirtoväki, rank >10, top result: Karjalan historia
+- [fi] Venäläistämisen ajat 1800-luvun lopulla ja 1900-luvun alussa → expected Sortovuodet, rank >10, top result: Suomen suuriruhtinaskunta
+- [fi] Saksassa koulutetut suomalaiset vapaaehtoiset ensimmäisen maailmansodan aikana → expected Jääkäriliike, rank >10, top result: Talvisota
+- [fi] Ruotsin ja Novgorodin välinen rauha vuonna 1323 → expected Pähkinäsaaren rauha, rank 7, top result: Luettelo Ruotsin sodista
+- [fi] Upseerien salaliitto Kustaa III:n Venäjän-sodan aikana → expected Anjalan liitto, rank >10, top result: Suomen suuriruhtinaskunta
+- [fi] Suomen ja Saksan välinen sopimus kesällä 1944 → expected Ryti–Ribbentrop-sopimus, rank >10, top result: Jatkosota
+- [fi] Toisen maailmansodan jälkeinen rauhansopimus, jossa Suomi menetti alueita → expected Pariisin rauhansopimus (1947), rank >10, top result: Yle Sámi Radio
