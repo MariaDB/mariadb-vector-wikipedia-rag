@@ -4,8 +4,8 @@
 > questions, the vector index is tuned, and search can be limited to a category. Still to do:
 > hybrid search, chunks, and *Ask* (step 7). Anything marked **(to verify)** is not checked yet.
 >
-> **Developed against MariaDB 12.2.2** (Homebrew, macOS). Vector search needs 11.7 or later;
-> `docker-compose.yml` uses `mariadb:lts`.
+> **Developed against MariaDB 12.2.2** (Homebrew, macOS); the Docker route was tested with
+> `mariadb:lts`, which was **12.3.3** in October 2026. Vector search needs 11.7 or later.
 
 Ask a question in English, Finnish or Swedish and find the Wikipedia articles that answer it —
 even when the answer is only written in another language. Then let an AI model write a short
@@ -20,6 +20,20 @@ Built for the [Junction 2026](https://www.hackjunction.com/) challenge *Wikipedi
 as the example for the RAG track. The data is the *History of Finland* set (dataset **S**):
 28,345 articles: 18,859 Finnish, and the 4,904 English and 4,582 Swedish articles on the same
 topics. 2,615 topics exist in all three languages.
+
+## Quick start
+
+You need Python 3.11+, [Ollama](https://ollama.com/download) running, and Docker. Then:
+
+```bash
+git clone https://github.com/robertsilen/mariadb-vector-wikipedia-rag.git
+cd mariadb-vector-wikipedia-rag
+./setup.sh                  # packages, the bge-m3 model, MariaDB in Docker, data and vectors
+.venv/bin/python app.py     # the search page: http://localhost:8000
+```
+
+`setup.sh` took 2 min 50 s from a fresh clone (model and Docker image already downloaded;
+otherwise add ~1.7 GB of downloads). The tutorial below builds the same thing step by step.
 
 ## What we found
 
@@ -198,8 +212,9 @@ allows it (see step 2).
 | Python | 3.11 or later | The load, embed and search scripts | `python3 --version` |
 | Accounts / API keys | **None** | Everything in steps 1–6 and 8 is free and local | — |
 
-Time: ~15 minutes to set up. Then either load the ready-made vectors (a few minutes) or embed
-everything yourself (~5 hours on a MacBook Air M4).
+Time: steps 0–3 take a few minutes. Then either load the ready-made vectors (~3 minutes) or
+embed everything yourself (~5 hours on a MacBook Air M4). `./setup.sh` does steps 0–4 with the
+ready-made vectors; the steps below are what it does.
 
 ```bash
 ollama pull bge-m3
@@ -210,14 +225,14 @@ pip install -r requirements.txt
 ### Step 1 — Start MariaDB
 
 ```bash
-docker compose up -d
+docker compose up -d --wait
 ```
 
 `docker-compose.yml` starts `mariadb:lts` with a database, user and password all called
-`wikirag`, and creates the tables from `schema.sql`. *(to verify: the Docker route; the demo was
-built on a local Homebrew MariaDB 12.2.2.)*
+`wikirag`, on **port 3307** — not the usual 3306, so it does not collide with a MariaDB you may
+already run. `--wait` returns when MariaDB is ready to take connections.
 
-Using your own MariaDB instead:
+**Using your own MariaDB instead** (11.7 or later):
 
 ```sql
 CREATE DATABASE wikirag;
@@ -225,16 +240,25 @@ CREATE USER wikirag@localhost IDENTIFIED BY 'wikirag';
 GRANT ALL ON wikirag.* TO wikirag@localhost;
 ```
 
-The scripts read `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD` and `DB_NAME` from the
-environment; the defaults above are for a local demo only.
+and put its port in a file called `.env` in this folder:
+
+```
+DB_PORT=3306
+```
+
+The scripts read `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD` and `DB_NAME` from `.env` or
+the environment (`common.py`). The defaults are for a local demo only. `./setup.sh --local`
+sets everything up against your own MariaDB.
 
 ### Step 2 — Create the tables
 
-With Docker, `docker compose up` already did this. With a local MariaDB:
-
 ```bash
-mariadb -u wikirag -pwikirag wikirag < schema.sql
+python create_tables.py
 ```
+
+It runs [schema.sql](schema.sql) over the normal connection — the same way for Docker and a local
+MariaDB. (Mounting `schema.sql` into the container would be the usual Docker way, but Docker on a
+Mac only sees files in your home folder, so a clone elsewhere fails.)
 
 The tables in [schema.sql](schema.sql):
 
@@ -519,6 +543,10 @@ exact 10 the index found.
 - **`mhnsw_ef_search`** is how many candidates one search looks at; set per session.
 - With 1024-dimensional vectors, the defaults are too low: a denser graph (`M=16`) helped more
   than searching longer. We use `M=16` and `ef_search=80` (`schema.sql`, `common.py`).
+- **The index is not the same twice.** Built by loading the ready-made vectors into a fresh
+  MariaDB 12.3.3 in Docker, the same settings gave 95% (`ef_search=20`) and 99% (`ef_search=80`)
+  — the graph depends on the order the rows went in. The end result (`evaluate.py`) was
+  identical: hit@5 81%, hit@10 94%.
 - `mhnsw_max_cache_size` was left at its default, 16 MB. *(to verify: whether a bigger cache
   makes searches faster; it is a global setting.)*
 
@@ -592,6 +620,8 @@ exact terms. *(Hybrid: to do.)*
 | Rebuild the vector index with `M=16` | 3.5 min |
 | Ready-made vectors (`data/vectors-bge-m3-*.parquet`) | 110 MB |
 | Empty database to searchable with `load.py --vectors` | 2 min 40 s |
+| Fresh clone to ready with `./setup.sh` (Docker, MariaDB 12.3.3) | 2 min 50 s |
+| First search after a cold start | ~1.6 s (Ollama loads the model); then ~60 ms |
 | Keyword search (`FULLTEXT`) | ~25 ms |
 
 ## Sharing it
