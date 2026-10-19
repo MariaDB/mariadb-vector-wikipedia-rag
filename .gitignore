@@ -5,3 +5,4 @@ data/vectors-*.parquet
 data/*.log
 .DS_Store
 data/*.part
+.env

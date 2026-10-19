@@ -1,4 +1,4 @@
-# MariaDB for Wikipedia RAG with MariaDB Vector. Start:  docker compose up -d
+# MariaDB for Wikipedia RAG with MariaDB Vector. Start:  docker compose up -d --wait
 # Ollama is not in here on purpose: run it on your machine so it can use the GPU.
 services:
   mariadb:
@@ -9,10 +9,14 @@ services:
       MARIADB_USER: wikirag
       MARIADB_PASSWORD: wikirag
     ports:
-      - "3306:3306"
+      - "3307:3306"     # 3307 on your machine, so it does not collide with a local MariaDB on 3306
     volumes:
       - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
       - wikirag-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      retries: 30
 
 volumes:
   wikirag-data:

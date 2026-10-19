@@ -1,9 +1,19 @@
 """Settings and small helpers shared by the scripts. You do not run this file."""
 import os, json, mariadb, requests
 
-# --- Database. The defaults match docker-compose.yml. ---
+# --- Settings can be overridden in a file called .env next to this one, e.g. DB_PORT=3306
+# for a MariaDB installed on your machine instead of the one in docker-compose.yml.
+_env = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+if os.path.exists(_env):
+    for line in open(_env):
+        if "=" in line and not line.lstrip().startswith("#"):
+            key, value = line.strip().split("=", 1)
+            os.environ.setdefault(key.strip(), value.strip())
+
+# --- Database. The defaults match docker-compose.yml (port 3307, so it does not collide with
+# a MariaDB already running on the usual port 3306). ---
 DB = dict(host=os.environ.get("DB_HOST", "127.0.0.1"),
-          port=int(os.environ.get("DB_PORT", 3306)),
+          port=int(os.environ.get("DB_PORT", 3307)),
           user=os.environ.get("DB_USER", "wikirag"),
           password=os.environ.get("DB_PASSWORD", "wikirag"),
           database=os.environ.get("DB_NAME", "wikirag"))
