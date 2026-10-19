@@ -646,6 +646,18 @@ exact terms. *(Hybrid: to do.)*
 4. **Which AI model for *Ask* (later)?** Whole articles need a long context, which pushes toward a
    cloud model (API key). A local model through Ollama keeps it free and offline but works best
    with chunks.
+5. **User experience, and where this should live.** Who is it for — readers looking something up,
+   or editors looking for gaps and sources — and what should they see: a list of articles, an
+   answer, or both? And where would it run:
+   - **A separate web page**, as now: easiest, but people have to find it.
+   - **A tool on [Wikimedia Toolforge](https://wikitech.wikimedia.org/wiki/Portal:Toolforge)**,
+     Wikimedia's hosting for community tools, which also offers MariaDB databases (ToolsDB).
+     The realistic route for a community tool. *(to verify: whether ToolsDB's MariaDB version has
+     vector search, and where the question embedding would run — there is no GPU.)*
+   - **Inside Wikipedia**: a MediaWiki extension, or a gadget (a script editors switch on) that
+     calls a Toolforge service — e.g. "articles on this topic in other languages" next to an
+     article. Closest to the reader; an extension needs Wikimedia's review and runs on their
+     production servers, which are themselves MariaDB.
 
 ## Authors
 
