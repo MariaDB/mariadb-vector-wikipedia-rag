@@ -1,5 +1,10 @@
 """Find every Finnish article in the category "Suomen historia" and its subcategories.
 
+Then adds the main article of every named category one level deeper: famous people and things
+have a category of their own, with their article inside it (Luokka:Urho Kekkonen holds the article
+Urho Kekkonen). Walking that whole level would double the set with lists of politicians and
+councillors; taking only these main articles adds ~460, including the presidents.
+
 Writes three files, takes about 10 minutes:
   data/articles-fi.tsv            page_id, title, level (how deep below the root it was found)
   data/category-links-fi.tsv      parent category, subcategory — the category tree
@@ -45,6 +50,7 @@ categories = {ROOT}
 articles = {}                   # page_id -> (title, level)
 links = set()                   # (parent category, subcategory)
 memberships = set()             # (page_id, category)
+deeper = {}                     # category one level below the walk -> its parent
 this_level = [ROOT]
 for level in range(LEVELS + 1):
     next_level = []
@@ -56,11 +62,28 @@ for level in range(LEVELS + 1):
                 if m["title"] not in categories:
                     categories.add(m["title"])
                     next_level.append(m["title"])
+            elif m["ns"] == 14:                                    # a category one level deeper
+                deeper.setdefault(m["title"], cat)
             elif m["ns"] == 0:                                                     # an article
                 articles.setdefault(m["pageid"], (m["title"], level))
                 memberships.add((m["pageid"], name(cat)))
     print(f"level {level}: {len(categories)} categories, {len(articles)} articles", file=sys.stderr)
     this_level = next_level
+
+# Named categories one level deeper: is there an article with exactly the category's name?
+candidates = [c for c in deeper if c not in categories]
+named = 0
+for i in range(0, len(candidates), 50):
+    batch = candidates[i:i + 50]
+    for page in api_all({"action": "query", "titles": "|".join(name(c) for c in batch)}, "pages"):
+        category = "Luokka:" + page.get("title", "")
+        if page.get("missing") or page["ns"] != 0 or page["pageid"] in articles or category not in deeper:
+            continue
+        articles[page["pageid"]] = (page["title"], LEVELS + 1)
+        links.add((name(deeper[category]), page["title"]))
+        memberships.add((page["pageid"], page["title"]))
+        named += 1
+print(f"named categories one level deeper: {named} main articles added", file=sys.stderr)
 
 with open("data/articles-fi.tsv", "w") as f:
     f.write("page_id\ttitle\tlevel\n")

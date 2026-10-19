@@ -19,11 +19,12 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--runs", type=int, default=3, help="repeat each search this many times for timing")
 parser.add_argument("--modes", default="vector,keyword")
 parser.add_argument("--misses", action="store_true", help="list questions whose answer was not in the top 5")
+parser.add_argument("--questions", default="data/test-questions.tsv", help="the test questions")
 args = parser.parse_args()
 
 con = connect()
 cur = con.cursor()
-with open("data/test-questions.tsv") as f:
+with open(args.questions) as f:
     questions = list(csv.DictReader(f, delimiter="\t"))
 
 # The answer as a topic: its wikidata_id, or its page_id if it has none.

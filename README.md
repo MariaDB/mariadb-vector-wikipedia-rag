@@ -1,6 +1,6 @@
 # Wikipedia RAG with MariaDB Vector
 
-> **Status:** steps 1–6 work, and step 8 is partly done: retrieval is measured against 32 test
+> **Status:** steps 1–6 work, and step 8 is partly done: retrieval is measured against 37 test
 > questions, the vector index is tuned, and search can be limited to a category. Still to do:
 > hybrid search, chunks, and *Ask* (step 7). Anything marked **(to verify)** is not checked yet.
 >
@@ -18,8 +18,8 @@ database, and one SQL statement does the semantic search. No separate vector dat
 
 Built as an example for doing RAG with MariaDB Vector. The data is *History of Finland* on
 Wikipedia (a small dataset relative to the entire Finnish Wikipedia of over 500k articles):
-28,345 articles — 18,859 Finnish, and the 4,904 English and 4,582 Swedish articles on the same
-topics. 2,615 topics exist in all three languages.
+29,460 articles — 19,285 Finnish, and the 5,254 English and 4,921 Swedish articles on the same
+topics. 2,919 topics exist in all three languages.
 
 ## Quick start
 
@@ -37,8 +37,8 @@ otherwise add ~1.7 GB of downloads). The tutorial below builds the same thing st
 
 ## What we found
 
-- **Cross-language search works.** 32 test questions in Finnish, Swedish and English: the right
-  article is in the top 5 for 81%, in the top 10 for 94%. Ordinary keyword search: 19% and 44%.
+- **Cross-language search works.** 37 test questions in Finnish, Swedish and English: the right
+  article is in the top 5 for 76%, in the top 10 for 86%. Ordinary keyword search: 16% and 41%.
   Questions whose answer exists *only in Finnish* were found at rank 1 even when asked in English
   or Swedish.
 - **The default vector index settings were not good enough.** With MariaDB's defaults (`M=6`,
@@ -51,6 +51,9 @@ otherwise add ~1.7 GB of downloads). The tutorial below builds the same thing st
   subcategories (a recursive query over the category tree) plus the vector ranking: exact results,
   10 ms for a small category — but 2 s for one that holds every article, because MariaDB then
   compares them all instead of using the index.
+- **Questions about a fact in a person's life miss.** *"Who was the president of Finland from
+  1956 to 1982?"* does not find *Urho Kekkonen* in the top 10: one vector for a whole
+  biography sums up a life, not one fact in it. 3 of our 5 questions about presidents missed.
 - **One vector per article finds the topic, not the fact.** *"Who led Finland in the Winter War"*
   finds the Winter War, not its leaders.
 
@@ -72,7 +75,7 @@ Details and how each was measured: step 8 and *Numbers*.
 
 ## What you will have at the end
 
-- A MariaDB database with 28,345 Wikipedia articles in three languages, each with a vector, and
+- A MariaDB database with 29,460 Wikipedia articles in three languages, each with a vector, and
   the category tree they belong to.
 - A loader you can stop and restart: embed 100 articles, try search, embed 1,000 more.
 - A small web page with two boxes:
@@ -103,13 +106,14 @@ Details and how each was measured: step 8 and *Numbers*.
   [Luokka:Suomen historia](https://fi.wikipedia.org/wiki/Luokka:Suomen_historia), three levels of
   subcategories down, plus the English and Swedish articles on the same topics. The list and the
   category tree ship in this repo (`data/*.tsv`), so nobody has to walk the categories again.
-- **A gap to know about:** some central people are not in the set — *Mannerheim*, *Kekkonen*,
-  *Ståhlberg*, *Paasikivi*, *Svinhufvud*. Famous people have their own category (*Luokka:Urho
-  Kekkonen*), and their article sits inside it — one level deeper than we walk. Walking one more
-  level would add ~1,260 categories and up to ~26,600 articles, mostly lists of politicians, city
-  councillors and officers (and the band *Nightwish*): it would double the set and dilute it.
-  Taking only the main article of each such named category would add 458 articles, including
-  these five presidents. *(to do)*
+- **Plus the main articles of named categories one level deeper.** Famous people and things have
+  a category of their own, with their article inside it (*Luokka:Urho Kekkonen* holds *Urho
+  Kekkonen*) — one level deeper than the walk, so the first version of the data had no
+  *Mannerheim*, *Kekkonen*, *Ståhlberg*, *Paasikivi* or *Svinhufvud*. Walking that whole level
+  would add ~1,260 categories and up to ~26,600 articles, mostly lists of politicians, city
+  councillors and officers (and the band *Nightwish*): double the set, and diluted. Taking only
+  the article with the same name as its category added 458 Finnish articles (and their Swedish
+  and English versions), the presidents among them.
 - **Which text:** [FineWiki](https://huggingface.co/datasets/HuggingFaceFW/finewiki) (August
   2025). Clean Markdown made from Wikipedia's rendered pages: templates filled in, no wiki markup
   noise. Raw wikitext would put `{{Infobox …}}` and reference syntax into the vectors.
@@ -164,13 +168,13 @@ is one setting; comparing two models is a good project in itself.
 Why start there:
 
 - **Simple:** one article = one row = one vector. Easy to explain, easy to link back to Wikipedia.
-- **Small:** 28,345 vectors (~120 MB). Fast to search.
+- **Small:** 29,460 vectors (~120 MB). Fast to search.
 - **Good at "which article is about this?"** — which is what the Search box shows.
 
 What it costs — **the open question**:
 
-- **Long articles get cut.** bge-m3 reads 8,192 tokens; the rest is ignored. Measured: 256 of
-  28,345 articles (0.9%) are longer, e.g. *Talvisota*. Few, but they are often the most important
+- **Long articles get cut.** bge-m3 reads 8,192 tokens; the rest is ignored. Measured: 290 of
+  29,460 articles (1.0%) are longer, e.g. *Talvisota*. Few, but they are often the most important
   ones.
 - **Details get diluted.** One vector sums up the whole article. A fact in paragraph 30 barely
   moves it, so very specific questions match worse. Seen in practice: *"who led Finland in the
@@ -334,8 +338,8 @@ Why it looks like this:
 python load.py
 ```
 
-- Loads the articles from `data/articles-fi.parquet`, `-sv` and `-en` (28,345 articles, cut out
-  of FineWiki, 56 MB in total) and the categories from `data/*.tsv`. All in this repo. Takes a few
+- Loads the articles from `data/articles-fi.parquet`, `-sv` and `-en` (29,460 articles, cut out
+  of FineWiki, 57 MB in total) and the categories from `data/*.tsv`. All in this repo. Takes a few
   seconds.
 - Safe to run again: rows already loaded are skipped.
 
@@ -343,8 +347,8 @@ python load.py
 
 1. **The article list.** `find_articles.py` walks the category
    [Luokka:Suomen historia](https://fi.wikipedia.org/wiki/Luokka:Suomen_historia) three levels
-   down with the Wikipedia API: 1,017 categories, 1,302 links between them, **19,290 articles**,
-   10 minutes. The results are in the repo: `data/articles-fi.tsv`, `data/category-links-fi.tsv`,
+   down with the Wikipedia API: 1,017 categories, 1,760 links between them, **19,754 articles**
+   (19,296 from the walk, 458 main articles of named categories one level deeper), 10 minutes. The results are in the repo: `data/articles-fi.tsv`, `data/category-links-fi.tsv`,
    `data/article-categories-fi.tsv`.
 2. **Only three languages.** FineWiki is 185 GiB in total, but stored as one folder per language:
    `fiwiki` 1.65 GB (2 files), `svwiki` 3.1 GB (3 files), `enwiki` 37.7 GB (15 files).
@@ -360,11 +364,11 @@ What came out:
 
 | | Articles | Text | Time |
 |---|---|---|---|
-| fi | 18,859 of the 19,290 in the list | 66 MB | 4 min (2 files) |
-| sv | 4,582 | 12 MB | ~30 min (3 files, with waits) |
-| en | 4,904 | 25 MB | 82 min (15 files, ~5.5 min each) |
+| fi | 19,285 of the 19,754 in the list | 73 MB | 4 min (2 files) |
+| sv | 4,921 | 14 MB | ~30 min (3 files, with waits) |
+| en | 5,254 | 28 MB | 82 min (15 files, ~5.5 min each) |
 
-The 431 missing Finnish articles are newer than FineWiki's August 2025 snapshot, or pages
+The 469 missing Finnish articles are newer than FineWiki's August 2025 snapshot, or pages
 FineWiki leaves out. Times are on a ~3 MB/s home connection.
 
 **Hugging Face limits requests.** Reading single columns means ~3,000 small requests per file,
@@ -376,10 +380,10 @@ continues. Logging in with a free Hugging Face token raises the limit *(to verif
 **The quick way:** load the vectors we computed (same model, same settings) and go to step 5.
 
 ```bash
-python load.py --vectors      # downloads data/vectors-bge-m3-*.parquet (110 MB) the first time
+python load.py --vectors      # downloads data/vectors-bge-m3-*.parquet (119 MB) the first time
 ```
 
-From an empty database to searchable: 2 min 40 s (most of it is MariaDB building the vector index
+From an empty database to searchable: 2 min 40 s for the first version of the data (most of it is MariaDB building the vector index
 as the rows arrive). Checked: `evaluate.py` gives the same numbers on a fresh copy.
 
 **Or compute them yourself** — the point of the tutorial, and what you need for another model:
@@ -487,9 +491,9 @@ Planned, not built in the first round. We first make search good (steps 1–6 an
 
 The first version uses simple defaults on purpose. This step is about measuring and tuning them.
 
-**How to measure.** [data/test-questions.tsv](data/test-questions.tsv) has 32 questions about
-the history of Finland — 11 in English, 10 in Swedish, 11 in Finnish — each with the article that
-answers it. For 4 of them that article exists only in Finnish. A hit is the answer in *any*
+**How to measure.** [data/test-questions.tsv](data/test-questions.tsv) has 37 questions about
+the history of Finland — 13 in English, 11 in Swedish, 13 in Finnish — each with the article that
+answers it. For 4 of them that article exists only in Finnish; 5 ask about presidents. A hit is the answer in *any*
 language (same `wikidata_id`). Change one thing, run it again, compare.
 
 ```bash
@@ -503,34 +507,40 @@ python index_recall.py                 # vector index against exact search, for 
 
 | | Questions | hit@1 | hit@5 | hit@10 | MRR |
 |---|---|---|---|---|---|
-| **Vector** | all | 62% | 81% | 94% | 0.72 |
-| | in English | 64% | 82% | 91% | 0.72 |
-| | in Swedish | 80% | 80% | 100% | 0.83 |
-| | in Finnish | 45% | 82% | 91% | 0.61 |
+| **Vector** | all 37 | 57% | 76% | 86% | 0.65 |
+| | in English | 54% | 69% | 77% | 0.61 |
+| | in Swedish | 82% | 82% | 100% | 0.84 |
+| | in Finnish | 38% | 77% | 85% | 0.52 |
 | | answer only in Finnish | 100% | 100% | 100% | 1.00 |
-| **Keyword** (`FULLTEXT`) | all | 12% | 19% | 44% | 0.17 |
+| | the first 32 (no presidents) | 62% | 81% | 94% | 0.71 |
+| **Keyword** (`FULLTEXT`) | all 37 | 11% | 16% | 41% | 0.15 |
 | | answer only in Finnish | 0% | 0% | 0% | 0.00 |
 
-Latency: embedding the question 36 ms (median); the SQL query 23 ms median including the join
-and Python (vector search) and 16 ms (keyword). Single machine, 5 runs per question.
+Latency: embedding the question 28 ms (median); the SQL query 16 ms (vector, including the join
+and Python) and 26 ms (keyword). Single machine, 5 runs per question. Full output:
+[data/evaluation.txt](data/evaluation.txt).
 
 What it says:
 
 - **Vector search is far better than keyword search here.** Keyword search cannot cross
   languages at all, and MariaDB's `FULLTEXT` has no Finnish stemming: *Mannerheim* matches 649
   articles, *Mannerheimin* 305, *Mannerheimille* 43 — each word form is a different search.
-- **The misses are near-misses.** 6 of 32 not in the top 5; 4 of those are at rank 6–9. The
+- **Adding 1,115 articles did not hurt.** The first 32 questions score as before (81% / 94%) on
+  the larger set; the lower total comes from the 5 new questions about presidents, 3 of which miss
+  completely (Kekkonen, Svinhufvud, and Mannerheim asked in Finnish). A fact in a long
+  biography is the case one vector per article handles worst.
+- **The other misses are near-misses.** 6 of the first 32 not in the top 5; 4 of those are at rank 6–9. The
   vector finds the neighbourhood: asked for the emperor's 1899 decree that limited Finnish
   autonomy (*Helmikuun manifesti*), it ranks first his 1891 rescript on the same autonomy
   (*Rauhoitusreskripti*).
-- **Finnish questions have the lowest hit@1** (45%). Many Finnish articles are long; one vector
+- **Finnish questions have the lowest hit@1** (38%). Many Finnish articles are long; one vector
   for a long article is less focused. Chunks are the obvious next test.
-- 32 questions is a small set: one question is 3 percentage points. Good for comparing settings,
+- 37 questions is a small set: one question is about 3 percentage points. Good for comparing settings,
   not for claiming a precise number.
 
 #### Measured: vector index settings
 
-`python index_recall.py`: for each of the 32 questions, the exact top 10 (index switched off with
+`python index_recall.py`, run on the first version of the data (28,345 articles, 32 questions): for each question, the exact top 10 (index switched off with
 `IGNORE INDEX`, all vectors compared) against the index's top 10. *recall@10* = how many of the
 exact 10 the index found.
 
@@ -558,7 +568,7 @@ exact 10 the index found.
 
 #### Measured: query shape and filters
 
-Same question, 3 runs, fastest shown:
+Same question, 3 runs, fastest shown; first version of the data (28,345 articles):
 
 | Query | Rows read | Time | Results |
 |---|---|---|---|
@@ -613,19 +623,19 @@ exact terms. *(Hybrid: to do.)*
 
 | | |
 |---|---|
-| Find the article list (`find_articles.py`) | 10 min, 19,290 articles |
-| Cut Finnish out of FineWiki (`prepare.py fi`) | 4 min, 18,859 articles, 66 MB of text |
-| Cut Swedish and English (`prepare.py sv en`) | ~2 h, 9,486 articles, 37 MB of text (incl. rate-limit waits) |
+| Find the article list (`find_articles.py`) | 10 min, 19,754 articles |
+| Cut Finnish out of FineWiki (`prepare.py fi`) | 4 min, 19,285 articles, 73 MB of text |
+| Cut Swedish and English (`prepare.py sv en`) | ~2 h, 10,175 articles, 42 MB of text (incl. rate-limit waits) |
 | Load into MariaDB (`load.py`: articles and categories) | ~10 s |
 | Embedding speed, bge-m3 in Ollama | ~100 articles/min, ~1,400 tokens/s on average. Short articles 300+/min, long ones much slower |
-| Embed everything (28,345 articles) | ~4 h 50 min on a MacBook Air M4 (two runs, resumed in between) |
-| Articles longer than 8,192 tokens (cut) | 256 of 28,345 (0.9%): en 84 (1.7%), fi 153 (0.8%), sv 19 (0.4%) |
-| Database size | 345 MB: `article` 141 MB (text + full-text index), `article_vector` 204 MB (vectors + vector index) |
+| Embed everything | ~4 h 50 min for the first 28,345 articles; the 1,115 added later ~25 min |
+| Articles longer than 8,192 tokens (cut) | 290 of 29,460 (1.0%): en 96 (1.8%), fi 172 (0.9%), sv 22 (0.4%) |
+| Database size | ~310 MB: `article` 152 MB (text + full-text index), `article_vector` 157 MB (vectors + vector index) |
 | Embed one question | 0.04–0.07 s |
 | Vector search, incl. embedding the question | ~60 ms (embedding ~36 ms + SQL ~23 ms); ~2 s while `embed.py` runs |
 | Rebuild the vector index with `M=16` | 3.5 min |
-| Ready-made vectors (`data/vectors-bge-m3-*.parquet`) | 110 MB |
-| Empty database to searchable with `load.py --vectors` | 2 min 40 s |
+| Ready-made vectors (`data/vectors-bge-m3-*.parquet`) | 119 MB |
+| Empty database to searchable with `load.py --vectors` | 2 min 40 s (first version, 28,345 articles) |
 | Fresh clone to ready with `./setup.sh` (Docker, MariaDB 12.3.3) | 2 min 50 s |
 | First search after a cold start | ~1.6 s (Ollama loads the model); then ~60 ms |
 | Keyword search (`FULLTEXT`) | ~25 ms |
@@ -633,9 +643,10 @@ exact terms. *(Hybrid: to do.)*
 ## What is where
 
 - **Code and tutorial:** this repo. Clone it and follow the steps, or run `./setup.sh`.
-- **Articles and categories:** in this repo, `data/` (56 MB).
-- **Vectors:** 110 MB, too big to keep comfortably in git, so they are files in the
-  [`data-v1` release](https://github.com/robertsilen/mariadb-vector-wikipedia-rag/releases/tag/data-v1).
+- **Articles and categories:** in this repo, `data/` (57 MB).
+- **Vectors:** 119 MB, too big to keep comfortably in git, so they are files in the
+  [`data-v2` release](https://github.com/robertsilen/mariadb-vector-wikipedia-rag/releases/tag/data-v2)
+  (`data-v1` holds the first version, without the named categories).
   `python load.py --vectors` downloads and loads them — you can search in minutes instead of
   embedding for five hours.
 - **MariaDB** runs in Docker (`docker-compose.yml`) or is your own. **Ollama** always runs on your
@@ -646,7 +657,7 @@ exact terms. *(Hybrid: to do.)*
 1. **Whole article or chunks?** Plan: whole first, measure, try chunks in step 8.
 2. **bge-m3 or a newer model?** bge-m3 is the safe default; step 8 tests one newer model on the
    same questions.
-3. **More test questions.** The 32 were written by us; questions from someone who knows Finnish
+3. **More test questions.** The 37 were written by us; questions from someone who knows Finnish
    history would make the numbers more trustworthy.
 4. **Which AI model for *Ask* (later)?** Whole articles need a long context, which pushes toward a
    cloud model (API key). A local model through Ollama keeps it free and offline but works best

@@ -14,7 +14,7 @@ import pyarrow.parquet as pq
 from common import connect, MODEL
 
 BATCH = 200
-RELEASE = "https://github.com/robertsilen/mariadb-vector-wikipedia-rag/releases/download/data-v1"
+RELEASE = "https://github.com/robertsilen/mariadb-vector-wikipedia-rag/releases/download/data-v2"
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--vectors", action="store_true", help=f"also load data/vectors-{MODEL}-*.parquet")

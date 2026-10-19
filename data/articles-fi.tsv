@@ -5,17 +5,24 @@ page_id	title	level
 142	Carl Ludvig Engel	3
 186	Erik Edner	3
 189	Eduskuntavaalit	3
+203	Eno	4
 255	Fennomania	1
 279	Gladiaattorit	3
+327	Hanoi Rocks	4
 422	Jan-Erik Enestam	3
 439	Johannes Virolainen	3
 440	Jatkosota	3
+498	Kalevala	4
 522	Suomen kansanedustaja	3
 546	Kustaa III	1
 672	Luettelo Suomen entisistä kunnista	3
 692	Lars Levi Laestadius	3
+710	Leevi and the Leavings	4
+752	Mauno Koivisto	4
 773	Maamme	3
 795	Matti Vanhanen	3
+809	Mänttä	4
+876	Nylon Beat	4
 896	Oulunkylä	3
 942	Paavo Lipponen	3
 950	Palosaari (Vaasa)	1
@@ -29,22 +36,28 @@ page_id	title	level
 1126	Sm1	3
 1127	Sm2	3
 1135	Suomen pääministeri	3
+1137	Sauli Niinistö	4
 1149	Suomenlinna	3
 1150	Suomen sisällissota	3
+1187	Tarja Halonen	4
 1202	Tony Halme	3
 1203	Tapulikaupunki	1
 1256	Talvisota	3
+1275	Urho Kekkonen	4
 1286	Ulla-Maj Wideroos	3
 1302	Viikingit	2
 1333	Viipuri	3
 1366	Wolmar Schildt	2
 1381	Pääkaupunkiseudun yhteistyövaltuuskunta	2
 2979	Luettelo Suomen historian sodista	1
+3468	Karjaa	4
 3830	Juhana III	3
 4681	Vuosaari	2
 4920	Myyrmannin räjähdys	2
+5009	Teknillinen korkeakoulu	4
 5085	Säästöpankkien Keskus-Osake-Pankki	3
 5089	Televisiomaksu	2
+5237	Nastola	4
 5255	Kalevi Sorsa	3
 5261	Suomettuminen	2
 5308	Jokelan junaturma	3
@@ -58,13 +71,17 @@ page_id	title	level
 5507	Eerik X Knuutinpoika	2
 5508	Juhana Sverkerinpoika	2
 5509	Eerik XI Eerikinpoika	2
+5664	Halikko	4
 5759	Lestadiolaisuus	3
 5842	Suomen historia	0
 5843	Ruotsin vallan aika Suomessa	1
 5845	Itsenäisen Suomen historia	1
 5869	Rankijärjestelmä	0
+5901	Martti Ahtisaari	4
 5985	Kesäolympialaiset 1952	3
 6007	Suomen läänit	3
+6011	Etelä-Suomen lääni	4
+6021	Carl Gustaf Emil Mannerheim	4
 6052	Wasawings	2
 6227	Kulosaari	3
 6584	Nikolai I	2
@@ -72,38 +89,197 @@ page_id	title	level
 6816	Lapin sota	3
 6869	Lappi	2
 6944	Suomen suuriruhtinaskunta	1
+7006	Länsi-Suomen lääni	4
 7014	Ahvenanmaan lääni	2
+7062	Kestilä	4
 7079	Pultavan taistelu	3
+7095	Zachris Topelius	4
 7173	Valdemar Birgerinpoika	2
 7283	Saamelaiset	3
 7301	Suosikki	2
+7314	Mikael Agricola	4
 7360	Päivälehti	2
 7381	Itä-Uudenmaan maakunta	3
 7383	Etelä-Karjalan maakunta	3
 7445	Konginkankaan linja-autoturma	2
+7597	Itä-Suomen lääni	4
 7629	Dr16	3
 7649	Liberaalinen Kansanpuolue	3
+7650	K. J. Ståhlberg	4
+7656	Tampereen yliopisto (1925–2018)	4
+7657	Tampereen teknillinen yliopisto	4
 7675	Suojeluskunta	3
+7704	Haaparannan kunta	4
 7827	Lapin lääni	3
 7843	NG Nordic	3
 7904	Taistolaisuus	3
+7909	Suomen Kansan Demokraattinen Liitto	4
+7984	Rantsila	4
 8023	Kieltolaki (Suomi)	1
 8197	Anders Chydenius	2
+8212	Pieksänmaa	4
 8295	Mainilan laukaukset	2
+8302	Pielisensuu	4
+8352	Alahärmä	4
+8354	Alastaro	4
+8360	Anjalankoski	4
+8377	Artjärvi	4
+8380	Oulun lääni	4
+8391	Elimäki	4
+8393	Enontekiö	4
+8417	Hauho	4
+8418	Haukipudas	4
+8419	Haukivuori	4
+8422	Himanka	4
+8425	Honkajoki	4
+8426	Houtskari	4
+8431	Hämeenkoski	4
+8443	Iniö	4
+8459	Jaala	4
+8460	Jalasjärvi	4
+8466	Joutseno	4
+8467	Juankoski	4
+8468	Jurva	4
+8474	Jyväskylän maalaiskunta	4
+8477	Jämsänkoski	4
+8488	Kalvola	4
+8489	Kangaslampi	4
+8495	Karinainen	4
+8497	Karjalohja	4
 8504	Aarne Saarinen	3
+8551	Äetsä	4
+8566	Yläne	4
+8567	Ylämaa	4
+8568	Ylitornio	4
+8569	Ylistaro	4
+8589	Karttula	4
+8604	Kemiö	4
+8606	Kerimäki	4
+8607	Kesälahti	4
 8611	Haminan rauha	2
+8612	Kiihtelysvaara	4
+8613	Kiikala	4
+8614	Kiikoinen	4
+8615	Kiiminki	4
 8617	Suomen sota	2
+8618	Kisko	4
+8621	Kiukainen	4
+8624	Kodisjoki	4
+8626	Kolari	4
+8631	Korpilahti	4
+8632	Korppoo	4
+8634	Kortesjärvi	4
+8639	Kuhmalahti	4
+8643	Kuivaniemi	4
+8644	Kullaa	4
 8646	Suinulan verilöyly	2
+8649	Kuru	4
+8652	Kuusankoski	4
+8653	Kuusjoki	4
+8654	Kylmäkoski	4
+8655	Kälviä	4
+8659	Köyliö	4
+8661	Rovaniemen maalaiskunta	4
+8666	Lammi	4
+8673	Lavia	4
+8674	Lehtimäki	4
+8675	Leivonmäki	4
+8677	Lemu	4
+8683	Liljendal	4
+8686	Lappi (Rauma)	4
 8687	Janina Andersson	3
+8689	Sahalahti	4
+8724	Lohtaja	4
+8726	Loimaan kunta	4
+8732	Luopioinen	4
+8735	Luvia	4
+8736	Längelmäki	4
+8738	Maaninka	4
+8739	Maksamaa	4
+8742	Mellilä	4
+8745	Merimasku	4
+8747	Mietoinen	4
+8748	Mouhijärvi	4
+8751	Muonio	4
+8754	Muurla	4
+8763	Nauvo	4
+8764	Nilsiä	4
+8767	Noormarkku	4
+8769	Nummi-Pusula	4
+8772	Nurmo	4
+8774	Oravainen	4
 8779	Oulunsalo	2
+8789	Pello	4
 8821	Läskikapina	2
+8837	Pernaja	4
+8838	Perniö	4
+8839	Pertteli	4
+8840	Pertunmaa	4
+8841	Peräseinäjoki	4
+8851	Jäppilä	4
+8852	Pieksämäen maalaiskunta	4
+8853	Virtasalmi	4
+8879	Piikkiö	4
+8880	Piippola	4
+8884	Pohja	4
 8900	Karjalais-suomalainen sosialistinen neuvostotasavalta	2
 8901	Tarton rauha	2
 8905	Suomen esihistoria	1
+8921	Pulkkila	4
+8922	Punkaharju	4
+8931	Pyhäselkä	4
+8935	Pylkönmäki	4
+8941	Ristiina	4
+8944	Savonranta	4
+8950	Tuupovaara	4
+8952	Valtimo	4
+8953	Varpaisjärvi	4
+8954	Vehmersalmi	4
+8957	Värtsilä	4
+8958	Vähäkyrö	4
+8960	Ruotsinpyhtää	4
+8965	Renko	4
+8968	Ruukki	4
+8969	Rymättylä	4
+8981	Sammatti	4
+8986	Suomenniemi	4
+8989	Tammisaari	4
+8991	Tuulos	4
+8992	Uukuniemi	4
+8993	Valkeala	4
+9030	Väinö Linna	4
 9059	Osmo Soininvaara	3
 9079	Pohjois-Karjalan maakunta	3
+9081	Somerniemi	4
+9084	Sumiainen	4
+9086	Suodenniemi	4
+9104	Suolahti	4
+9105	Suomusjärvi	4
+9109	Särkisalo	4
 9111	Taivassalo	2
+9112	Tarvasjoki	4
+9116	Toijala	4
+9118	Tornio	4
+9120	Töysä	4
+9121	Ullava	4
 9122	Ulvila	3
+9124	Dragsfjärd	4
+9125	Askainen	4
+9136	Vahto	4
+9137	Vammala	4
+9138	Vampula	4
+9140	Velkua	4
+9142	Västanfjärd	4
+9144	Viiala	4
+9146	Viljakkala	4
+9147	Vilppula	4
+9153	Vihanti	4
+9154	Ylihärmä	4
+9155	Vuolijoki	4
+9156	Yli-Ii	4
+9157	Ylikiiminki	4
+9186	Punakaarti	4
+9277	Danny	4
 9564	YYA-sopimus	1
 9606	Heimosodat	3
 9608	Erkki Tuomioja	3
@@ -127,6 +303,7 @@ page_id	title	level
 10878	Svinhufvudin I hallitus	2
 10881	Lipposen I hallitus	2
 10885	Lipposen II hallitus	2
+10904	Kiova	4
 10907	Ilkka Kanerva	3
 10908	Jäätteenmäen hallitus	2
 11043	Kuninkaanportti	3
@@ -135,19 +312,28 @@ page_id	title	level
 11179	Oulun lentoasema	3
 11191	Turun ja Suomen arkkipiispa	1
 11206	Blue1	2
+11258	Telia Finland	4
 11266	Saunalahti Group	3
+11278	Lauri Viita	4
 11392	Valmet	3
+11396	Alexander Stubb	4
 11398	Risto Ryti	3
+11443	Lauri Kristian Relander	4
+11444	P. E. Svinhufvud	4
+11445	Kyösti Kallio	4
+11446	Juho Kusti Paasikivi	4
 11477	Lapuanliike	3
 11510	Heidi Hautala	3
 11517	Eugen Schauman	3
 11537	Isänmaallinen kansanliike	3
 11593	Väinö Havas	3
+11594	Vanhoillislestadiolaisuus	4
 11601	Nikolai Bobrikov	3
 11619	Suomen kenraalikuvernööri	1
 11620	Suomen senaatti	2
 11629	Liberaalinen puolue	3
 11630	Kansallinen Edistyspuolue	3
+11634	Suomalainen puolue	4
 11639	Suomen Kansanpuolue	3
 11640	Itsenäinen Keskiluokka	3
 11642	Liberaalinuoret	3
@@ -156,6 +342,7 @@ page_id	title	level
 11646	Remonttiryhmä	3
 11649	Risto Kuisma	3
 11650	Sosialistinen Työväenpuolue (Suomi)	3
+11656	Suomen sosialistinen työväenpuolue	4
 11665	Sosialistisen Työväen ja Pienviljelijäin Vaalijärjestö	3
 11671	Aarre Simonen	3
 11673	Kaarlo Castrén	3
@@ -176,6 +363,7 @@ page_id	title	level
 11767	E. J. Paavola	3
 11774	Vanha Suomi	0
 11775	Porvoon valtiopäivät	2
+11790	Suomen Maaseudun Puolue	4
 11803	Isoviha	3
 11804	Pikkuviha	2
 11806	Kansanpuolue (1932)	3
@@ -202,11 +390,15 @@ page_id	title	level
 12250	Turun rauha	2
 12311	Lento-osasto Kuhlmey	1
 12374	Käkisalmi	3
+12393	Kuopion yliopisto	4
+12450	Simpele	4
 12465	Suomen kansantasavalta	2
 12466	Terijoki	3
 12467	Terijoen hallitus	2
 12491	Suomen Teiniliitto	2
 12492	Viina	0
+12501	The 69 Eyes	4
+12553	Kingston Wall	4
 12579	Lavansaari	3
 12582	Suursaari	3
 12584	Seiskari	3
@@ -232,7 +424,9 @@ page_id	title	level
 12881	Heikki A. Ollila	3
 12882	Harri Jaskari	3
 12885	Marjo Matikainen-Kallström	3
+12958	Ylitornion kunta	4
 13178	Ruotsi-Suomi	1
+13182	Elias Lönnrot	4
 13184	Suomi – Isänmaa	3
 13185	Suomen Kansan Sinivalkoiset	3
 13310	Suomenlahden ulkosaaret	2
@@ -241,6 +435,7 @@ page_id	title	level
 13529	Tyrvään Pyhän Olavin kirkko	3
 13556	Geosentric	3
 13591	Taisto Sinisalo	3
+13628	Saagat	4
 13642	Pirkkalaiset	1
 13650	Raimo Ilaskivi	3
 13652	Ritva Laurila	3
@@ -266,13 +461,18 @@ page_id	title	level
 14174	Tele Finland	2
 14175	Carrols	1
 14216	Tanja Karpela	3
+14365	Raippaluoto	4
 14389	Metso (entinen yritys)	3
 14391	Amer Sports	3
+14398	Nightwish	4
 14405	Karjalankannas	2
 14460	Lalli	2
+14596	Minna Canth	4
 14610	Vienan retket	2
 15142	Roope-setä	3
 15230	Kaari Utrio	3
+15294	Apulanta	4
+15295	Eppu Normaali	4
 15403	Suomen Ammattiyhdistysten Keskusliitto	3
 15405	Suomen Ammattijärjestö	3
 15467	Vuosiloma Suomessa	1
@@ -282,6 +482,17 @@ page_id	title	level
 15781	Sarjakuvalehti (lehti)	3
 16029	Tuija Nurmi	3
 16033	Lucina Hagman	3
+16213	Turun ja Porin lääni	4
+16214	Uudenmaan lääni	4
+16215	Kymi	4
+16216	Kymen lääni	4
+16217	Häme	4
+16218	Hämeen lääni	4
+16219	Vaasan lääni	4
+16220	Keski-Suomen lääni	4
+16221	Mikkelin lääni	4
+16222	Kuopion lääni	4
+16223	Pohjois-Karjalan lääni	4
 16331	Raatteen tien taistelu	2
 16430	Stolbovan rauha	2
 16431	Laatokka	2
@@ -289,15 +500,24 @@ page_id	title	level
 16518	Yrjö Kallinen	3
 16537	Aurora Karamzin	3
 16735	Väinö Tanner	3
+16812	Raptori	4
 16853	Helsingin pitäjän kirkonkylä	2
+16923	Tuomari Nurmio	4
 17050	Rudolf Koivu	3
+17105	HIM	4
 17109	Adolf Erik Nordenskiöld	3
+17190	Johan Vilhelm Snellman	4
 17203	Hertta Kuusinen	3
 17231	Akateeminen Karjala-Seura	2
+17272	Elämänsanalaisuus	4
+17274	Uusheräys	4
+17276	Esikoislestadiolaisuus	4
+17279	Rauhansanalaisuus	4
 17401	Hämeen rykmentti	2
 17463	Otto Wille Kuusinen	3
 17504	Kullervo Manner	3
 17550	Jaakko Iloniemi	3
+17562	Eduskunnan puhemiehet	4
 17600	Erno Paasilinna	3
 17685	WASB-050	2
 17746	Esko Aho	3
@@ -306,16 +526,19 @@ page_id	title	level
 17829	Kaarle VIII Knuutinpoika Bonde	3
 18033	Suomen kaarti	2
 18248	Tuntematon sotilas	2
+18249	Merenkurkku	4
 18316	Larin Paraske	2
 18320	A. F. Airo	3
 18343	Vilho Nenonen	3
 18349	Talvisodan henki	3
 18363	Karjalan autonominen sosialistinen neuvostotasavalta	3
 18379	Jukka Vihriälä	3
+18439	Kiirunan kunta	4
 18467	Mannerheim-risti	3
 18476	Eduskuntavaalit 2003	3
 18560	Pekka Sauri	3
 18561	Pekka Haavisto	3
+18591	Savo	4
 18602	Siionin kevät	3
 18646	Lauri Törni	3
 18658	Irak-vuoto	2
@@ -323,6 +546,7 @@ page_id	title	level
 18684	Olavinlinna	2
 18701	Kanteletar	3
 18721	Telppäs-niityn ihme	1
+18731	Huopalahti	4
 18768	Kansallis-Osake-Pankki	3
 18775	Merita-pankki	3
 18779	Niilo Kustaa Malmberg	2
@@ -335,11 +559,14 @@ page_id	title	level
 18930	Juha Mieto	3
 18959	Rytmi (lehti)	2
 19027	Organisation Todt	3
+19081	Pajalan kunta	4
 19086	Karjala-kysymys	2
 19101	Lotta Svärd	2
 19154	ProKarelia	2
+19177	Anttola	4
 19201	Jere Lahti	3
 19247	Edith Södergran	3
+19248	YUP	4
 19409	Alli Vaittinen-Kuikka	3
 19487	Tamfelt	3
 19525	Georg Magnus Sprengtporten	3
@@ -355,8 +582,10 @@ page_id	title	level
 19840	Bjarmia	3
 19873	Kalevalainen runous	3
 19879	Fornjótrin suku	3
+20012	Hella Wuolijoki	4
 20040	Paavo Väyrynen	3
 20053	Halti	3
+20070	Suomen maaherrat	4
 20212	Enso-Gutzeit	3
 20312	Vanha Rauma	3
 20507	Inkeri	1
@@ -370,6 +599,7 @@ page_id	title	level
 20716	Maaria	3
 20718	Kunnallisvaalit 2004	3
 20742	Venäläisvastaisuus	2
+20767	Sonata Arctica	4
 20779	Hämeen linna	2
 20813	Suomalaisten alkuperä	1
 20824	Säkkijärvi	3
@@ -378,7 +608,10 @@ page_id	title	level
 20992	Jakob Gadolin	2
 21279	Suomen ylioppilaskuntien liitto	3
 21416	Tiedonantaja	3
+21481	Demokraattinen Vaihtoehto	4
 21627	Paavo Nikula	3
+21760	Rautio	4
+21849	Dingo	4
 22013	Satu Hassi	3
 22153	Hiisi	2
 22208	Finncomm Airlines	2
@@ -390,6 +623,7 @@ page_id	title	level
 22883	Akateeminen Sosialistiseura	3
 23054	Faravid	1
 23070	Kuninkaanhauta	1
+23285	Vienanmeri	4
 23293	Suomen Rautatiemuseo	3
 23336	Kolmikymmenvuotinen sota	2
 23427	Merovingiaika	1
@@ -397,6 +631,7 @@ page_id	title	level
 23541	Rapolan muinaislinna	2
 23546	Vainionmäen kalmisto	1
 23560	Westfalenin rauha	2
+23596	Irwin Goodman	4
 23606	Suomen Kansan Järjestö	3
 23632	Ansa Ikonen	3
 23714	Karjalan kieli	2
@@ -409,6 +644,10 @@ page_id	title	level
 23832	Vatjan kieli	3
 23835	Inkeroisen kieli	2
 23892	Lyydin kieli	2
+23895	Vehkalahti	4
+23896	Pattijoki	4
+23897	Kuorevesi	4
+23899	Temmes	4
 23916	Tikkakoski	2
 23945	Yöpakkaset	2
 23950	Muurmannin legioona	2
@@ -419,6 +658,7 @@ page_id	title	level
 24197	Välirauha	3
 24470	Juuttaan taistelu	2
 24562	Sonera-kirja	2
+24682	Meänkieli	4
 24811	Ragnarök	3
 24813	Einherjar	3
 24862	Air Finland	2
@@ -457,6 +697,7 @@ page_id	title	level
 27916	Pariisin rauhansopimus (1947)	2
 28429	Aluepalautus	2
 28449	Oolannin sota	2
+28547	Stratovarius	4
 28709	Orkla Confectionery & Snacks	3
 28803	Yrjö Leino	3
 28984	Aalto-yliopiston taiteiden ja suunnittelun korkeakoulu	3
@@ -465,6 +706,7 @@ page_id	title	level
 29163	Suomen kulkulaitosten ja yleisten töiden ministeriö	1
 29258	Aki Sirkesalo	3
 29487	Leo (arkkipiispa)	2
+29518	Kalanti	4
 29547	Ulf Sundqvist	3
 29642	Milla Clemensdotter	3
 29744	Hiisi-TV	2
@@ -476,6 +718,9 @@ page_id	title	level
 30217	Joensuun lyseo	2
 30304	Sundqvist-jupakka	2
 30326	Suvi-Anne Siimes	3
+30331	WSOY	4
+30433	Bomfunk MC’s	4
+30447	Normannit	4
 30578	Helsingin ranskalais-suomalainen koulu	3
 30632	Vuoden 1952 kesäolympialaisten mitalitaulukko	3
 30677	Bo Joninpoika Grip	2
@@ -507,6 +752,7 @@ page_id	title	level
 32606	Itämaa	1
 32665	Ruokolahden leijona	2
 32885	Suomen itsenäisyyspäivä	1
+32894	Popeda	4
 32957	Suomen itsenäistyminen	2
 33121	Augustin Ehrensvärd	2
 33191	Arndt Pekurinen	3
@@ -536,6 +782,7 @@ page_id	title	level
 34929	Koulukoti	2
 34998	Sillanpääläisyys	3
 35003	Kunta-alan ammattiliitto KTV	3
+35075	Mikko Alatalo	4
 35104	Nikolai Adlerberg	3
 35270	Vapaamielisten Klubi	2
 35351	Karjalaiset (heimo)	1
@@ -562,11 +809,13 @@ page_id	title	level
 37591	Jyrki Kasvi	3
 37619	Punainen Mylly	3
 37639	Valtion lentokonetehdas	2
+37876	Ruotsinsuomalaiset	4
 37903	Eino Poutiainen	3
 38013	Saukko (saari)	2
 38167	Karjalan Maa	2
 38207	Terhi Peltokorpi	3
 38257	Ensimmäinen ristiretki Suomeen	2
+38512	Sielun Veljet	4
 38762	Messukylä	3
 38855	Iiro Viinanen	3
 38927	Tapani Löfving	3
@@ -576,6 +825,7 @@ page_id	title	level
 40117	Trevise Pankki	3
 40136	Tarja Cronberg	3
 40509	Mankin rautatieasema	2
+40535	Oulujoki	4
 40670	Napuen taistelu	2
 40772	Svartholman merilinnoitus	2
 41253	Abraham Wetter	3
@@ -606,7 +856,10 @@ page_id	title	level
 42139	Antti Koukkari	3
 42141	Seurat	2
 42353	Keijo Korhonen	3
+42412	Klamydia	4
+42453	Lapin vaalipiiri	4
 42469	Holkerin hallitus	2
+42561	Agents	4
 42651	Topi Sorsakoski	3
 42679	Suomen presidentinvaali 2006	3
 42837	Sorsakoski	2
@@ -638,6 +891,7 @@ page_id	title	level
 43853	Porvoon linnalääni	2
 43887	Mari Kiviniemi	3
 43945	Rehupiikles	3
+44294	Säynätsalo	4
 44333	Kansainvaellusaika	1
 44520	Silvolan tekojärvi	2
 44542	Vainovalkea	0
@@ -650,6 +904,7 @@ page_id	title	level
 45409	Karjalan Liitto	2
 45460	Eriseura	3
 45473	Hjallis Harkimo	3
+45672	Konginkangas	4
 45685	Benjamin Bassin	3
 45784	Sanna Sillanpää	2
 45798	Hyvinkään paloittelusurma	2
@@ -682,6 +937,7 @@ page_id	title	level
 47827	Lapinvero	2
 47837	Matthias Calonius	3
 47975	Irina Krohn	3
+48182	Lahden ammattikorkeakoulu	4
 48354	Rälssi	1
 48359	Raija Vahasalo	3
 48376	Heikki Ritavuori	2
@@ -695,6 +951,7 @@ page_id	title	level
 48811	Ypäjänkylä	2
 48833	Juha Väätäinen	3
 48882	Vallankumouksellinen nuorisoliitto	3
+48986	Metsämaa	4
 49026	Väinö Leskinen	3
 49241	Suomen presidentinvaali 1994	2
 49530	Ele Alenius	3
@@ -721,6 +978,7 @@ page_id	title	level
 51568	Sinebrychoff (suku)	2
 51778	Eero Paloheimo	3
 51828	Kalevi Kivistö	3
+51854	Perämeri	4
 52082	Margareeta I	2
 52097	Moskovan rauhansopimus (1940)	2
 52099	Moskovan välirauha	2
@@ -735,11 +993,13 @@ page_id	title	level
 52875	Karjalanpiirakka	3
 52973	Jääkäri	3
 53001	Ninai Games	3
+53116	Aitolahti	4
 53376	Vilho Annala	3
 53378	Paavo Susitaival	3
 53471	Kirveslinja	2
 53573	Dv12	3
 53625	Finnoon allas	2
+53722	Joensuun yliopisto	4
 53740	Svekomania	0
 53808	Clearing-kauppa	1
 53841	Taideyliopiston Kuvataideakatemia	3
@@ -775,6 +1035,7 @@ page_id	title	level
 55322	Kekkosen IV hallitus	2
 55326	Törngrenin hallitus	2
 55352	Napakivi	1
+55356	Koltat	4
 55360	Juminkeko	2
 55362	Trifon Petsamolainen	3
 55368	Petsamon luostari	2
@@ -813,6 +1074,9 @@ page_id	title	level
 56602	Kallion II hallitus	2
 56825	Päijälän linnavuori	2
 56874	Metsäsuomalaiset	3
+56884	Björköby	4
+56885	Bergö	4
+56886	Mikkelin maalaiskunta	4
 56888	Savilahti	3
 56908	Fredrik Cygnaeus	3
 56914	Rälssitila	1
@@ -863,6 +1127,7 @@ page_id	title	level
 60850	Varsinaiskarjala	2
 60948	Tyyppitalo	2
 61121	RinneRadio	3
+61137	Vanaja	4
 61139	Pika-asutuslaki	3
 61157	Oulun linna	2
 61311	Mirkka Rekola	3
@@ -883,6 +1148,7 @@ page_id	title	level
 62316	Tapionpöytä	2
 62357	Vilho Pentikäinen	3
 62410	Jari Sillanpää	3
+62412	Kuopion maalaiskunta	4
 62440	Seppo Toiviainen	3
 62491	Jomali	3
 62530	Miljoonasade	3
@@ -890,6 +1156,7 @@ page_id	title	level
 62597	Petrus Kaikewalde	2
 62651	Sten Sture vanhempi	3
 62683	Eerik Akselinpoika Tott	2
+62701	Freud Marx Engels & Jung	4
 63060	Karsikko (mytologia)	2
 63118	Buster	3
 63204	Eerik XIII Pommerilainen	2
@@ -903,8 +1170,15 @@ page_id	title	level
 63745	Jatulintarha	1
 63760	Lahdenpohja	3
 63828	Erkki Liikanen	3
+63837	Lapväärtti	4
 64033	Korpiselkä	3
+64034	Ahlainen	4
+64053	Alatornio	4
+64054	Alaveteli	4
+64055	Angelniemi	4
 64066	Antrea	3
+64071	Bromarv	4
+64087	Eräjärvi	4
 64100	Harlu	3
 64138	Puuhamaa	3
 64139	Tervakoski	3
@@ -913,18 +1187,30 @@ page_id	title	level
 64191	Kamasaksa	1
 64192	Ruotsit	0
 64198	Heinjoki	3
+64200	Hiittinen	4
 64201	Hiitola	3
+64203	Hinnerjoki	4
+64204	Honkilahti	4
 64208	Ihantala	3
 64212	Impilahti	3
 64223	Dekabristikapina	3
 64238	Jaakkima	3
+64239	Jepua	4
 64240	Johannes (Viipurin lääni)	3
 64244	Jääski	3
 64269	Jaakko Laakso	3
 64385	Kakskerta	3
 64389	Kanneljärvi	3
+64394	Karkku	4
+64395	Karuna	4
+64399	Kauvatsa	4
+64400	Keikyä	4
+64443	Kiikka	4
 64444	Kirvu	3
+64446	Koijärvi	4
 64450	Koiviston maalaiskunta	2
+64451	Koivulahti	4
+64458	Koskenpää	4
 64461	Kuolemajärvi	3
 64466	Hietamäki (Inkeri)	2
 64467	Inkere	2
@@ -960,9 +1246,12 @@ page_id	title	level
 64573	Valkeasaari	2
 64577	Miikkulainen (Inkeri)	2
 64591	Kurkijoki	3
+64592	Kuusisto	4
 64598	Ministerivaltiosihteeri	1
 64623	Itä-Karjalan kysymys	2
+64677	Lappee	4
 64750	Talonpoika	1
+64752	Lokalahti	4
 64753	Lumivaara	3
 64795	Rankki (saari)	3
 64814	Pyöreä torni	3
@@ -994,6 +1283,7 @@ page_id	title	level
 65591	Väinö Kuisma	3
 65639	Miekkavala	3
 65666	Snorri Sturluson	3
+65694	Pirkka-Pekka Petelius	4
 65760	Napakymppi (viihdeohjelma)	3
 65798	Savolaiset	0
 65810	Mikko Juva	3
@@ -1026,7 +1316,9 @@ page_id	title	level
 67303	Kuusiston piispanlinna	2
 67403	Pietari Suuren merilinnoitus	2
 67481	Vatjan viidennes	2
+67602	Finnmarkin lääni	4
 67604	Hämäläiset	0
+67611	Tromssan lääni	4
 67667	Suomenlinnan kirkko	3
 67670	Naantalin kirkko	3
 67698	Pinjainen	3
@@ -1037,6 +1329,7 @@ page_id	title	level
 67852	Suomenlahden tykistösulku	2
 68057	Karjalaisten laulu	2
 68241	EEC-vetoomus	2
+68242	Jaakko Teppo	4
 68252	Torppari	1
 68287	Huhtiniemen joukkohaudat	2
 68309	Santtu Karhu & Talvisovat	2
@@ -1110,6 +1403,9 @@ page_id	title	level
 69739	Naantalin luostari	2
 69774	Turun linnalääni	2
 69776	Raaseporin linnalääni	2
+69817	Kari Peitsamo	4
+69844	Saloinen	4
+69854	Sääminki	4
 69876	Eteläisten seinänaapurien seutukunta	3
 69959	Pitäjä	2
 69982	Lohjan seutukunta	3
@@ -1135,6 +1431,9 @@ page_id	title	level
 70600	Vuoksela	3
 70602	Vuoksenranta	3
 70605	Äyräpää	3
+70612	Sääksmäki	4
+70614	Muuruvesi	4
+70618	Sippola	4
 70670	Luettelo Suomen kirkkopitäjistä	3
 70682	Nakke	3
 70689	Kampakeraaminen kulttuuri	2
@@ -1153,9 +1452,11 @@ page_id	title	level
 71259	Forssan kokous	2
 71260	Sursillin suku	2
 71261	Laillinen suojelu	1
+71266	Rauman maalaiskunta	4
 71295	Raimo Vistbacka	3
 71315	Kelpo Gröndahl	3
 71371	Rönnskär	3
+71410	Kaarlela	4
 71421	Koillismaan rautatiesuunnitelmat	2
 71429	Lahden historia	2
 71442	Pekka Vesainen	2
@@ -1172,6 +1473,7 @@ page_id	title	level
 71627	Georg Carl von Döbeln	2
 71636	Jakov Kulnev	2
 71641	Piispa Henrikin surmavirsi	2
+71687	Nuijamaa	4
 71740	Suomi–Chile-seura	3
 71771	Oulun Automuseo	3
 71850	Ristiretket Suomeen	2
@@ -1182,6 +1484,7 @@ page_id	title	level
 72225	Tuure Junnila	3
 72257	Yrjö Sakari Yrjö-Koskinen	3
 72401	Eskolan metsärata	2
+72450	Suomalainen mytologia	4
 72461	Piae Cantiones	3
 72478	Tidningar Utgifne Af et Sällskap i Åbo	2
 72522	Suomenkieliset Tieto-Sanomat	2
@@ -1197,6 +1500,7 @@ page_id	title	level
 72840	Anders Johan Sjögren	3
 72842	Carl Axel Gottlund	3
 72862	Jacob Söderman	3
+72879	Karhula	4
 72888	Karhulan–Sunilan rautatie	2
 72966	Fennit	1
 73001	Berserkki	3
@@ -1218,10 +1522,12 @@ page_id	title	level
 73987	Nevanlinna	1
 74047	Belomorsk	3
 74049	Kontupohja	3
+74080	Kostamus	4
 74134	Paatene	3
 74154	Viipurin lääni	3
 74158	Pohjois-Pirkkala	2
 74164	Riimukivi	3
+74190	Kalevalan kansallinen piiri	4
 74200	Uhtua	3
 74213	Vuokkiniemi	3
 74239	Pistojärvi	3
@@ -1239,6 +1545,7 @@ page_id	title	level
 74528	Myllymäen koulu (Vantaa)	2
 74532	Helkavirsi	3
 74661	Usmana	3
+74687	Louhen piiri	4
 74946	Postipankki	3
 75024	Kieretti	3
 75029	Helsingin alueellinen laajeneminen	2
@@ -1248,6 +1555,7 @@ page_id	title	level
 75234	Helsingin lääni	2
 75249	Eduskuntavaalit 1999	2
 75260	Seututie 816	2
+75356	Porin maalaiskunta	4
 76044	Aunuksen Karjala	3
 76047	Laatokan Karjala	2
 76142	Oulun urheilutalo	2
@@ -1265,6 +1573,7 @@ page_id	title	level
 77091	Esiroomalainen rautakausi	1
 77093	Vanhempi roomalainen rautakausi	1
 77097	Nuorempi roomalainen rautakausi	1
+77130	Säyneinen	4
 77197	Pertti Salovaara	3
 77217	Voimavyö	3
 77280	Lampuoti	1
@@ -1276,6 +1585,7 @@ page_id	title	level
 77748	Naurun paikka	3
 77790	Joel Hallikainen	3
 77873	Pyhä lehto	2
+78044	Tyrvää	4
 78122	Tennispalatsi	3
 78632	Tietokone (lehti)	2
 78652	SIG	3
@@ -1309,11 +1619,13 @@ page_id	title	level
 80939	Proosa-Edda	3
 80940	Runo-Edda	3
 81143	Tampereen alueliitokset	2
+81174	Heinolan maalaiskunta	4
 81231	Juliet Jonesin Sydän	3
 81250	Piika	1
 81259	Punainen julistus	2
 81513	Katsastus (elokuva)	3
 81714	Lappalaiset skandinaavisessa tarustossa	3
+81822	Kuolansuomalaiset	4
 81858	Asgård	3
 81865	Ilomantsin taistelu 1944	2
 81958	Erik Punainen	3
@@ -1364,7 +1676,10 @@ page_id	title	level
 84104	Karjalan valistajat	3
 84248	Tuomas Pohjanpalo	3
 84354	V. Alamäki	2
+84424	Elanto	4
 84658	Regina (lehti)	2
+84711	Teerijärvi	4
+84767	Vieljärvi	4
 84775	Vitele	3
 84857	Olhavanjoki	2
 84868	Pentti Tiusanen	3
@@ -1397,6 +1712,7 @@ page_id	title	level
 86472	Oulujoki (Suomen entinen kunta)	2
 86496	Suomen MAD	3
 86507	Paattinen	3
+86781	Suomen Kansan Yhtenäisyyden Puolue	4
 86783	Eläintarhanajot	3
 86800	Viljami Kalliokoski	3
 86807	Filip Saalasti	3
@@ -1462,19 +1778,28 @@ page_id	title	level
 92454	Kollaan taistelu	2
 92605	Esko Kiviranta	3
 92624	Ernst Nevanlinna	3
+92762	Munsala	4
 92772	Nuorisoseuraliike	3
+92987	Suoniemi	4
 93085	Toivo Saloranta	3
 93098	Taavetti Lukkarinen	3
 93122	Ahti Pekkala	3
 93244	Arto Satonen	3
+93245	Petolahti	4
 93295	Sinimustat	3
+93359	Pirttikylä	4
+93365	Purmo	4
 93400	Jäniskosken–Niskakosken alue	2
 93464	Jyri Häkämies	3
 93466	Reijo Paajanen	3
 93506	Ahti Vielma	3
+93735	Pusula	4
+93736	Pyhämaa	4
 93738	Jan Vapaavuori	3
+93756	Revonlahti	4
 93816	Uhripuu	2
 93870	Hjalmar Siilasvuo	3
+93885	Haapasaari	4
 94060	Bluesounds	3
 94133	Suonenjoen junaturma	3
 94182	Gabriel Rein	3
@@ -1487,27 +1812,41 @@ page_id	title	level
 94638	Hugo Suolahti	3
 94646	Hanna-Leena Hemming	3
 94651	Niilo Tarvajärvi	3
+94712	Siipyy	4
+94715	Snappertuna	4
+94764	Sulva	4
 94784	Södertäljen kunta	2
 94833	Suomen presidentinvaali 1982	3
 94843	Suomen presidentinvaali 1919	3
 94844	Suomen presidentinvaali 1925	3
+94845	Teisko	4
 94850	Suomen presidentinvaali 1931	3
 94857	Suomen presidentinvaali 1937	3
 94858	Suomen presidentinvaali 1940	3
 94859	Suomen presidentinvaali 1943	3
 94861	Suomen presidentinvaali 1946	3
 94862	Suomen presidentinvaali 1950	3
+94882	Tenhola	4
 94920	Suomen presidentinvaali 1956	3
 94922	Suomen presidentinvaali 1988	3
+94992	Tottijärvi	4
+95016	Tyrväntö	4
+95018	Uskela	4
 95070	Graduale Aboense	2
 95101	Suomen presidentinvaali 1962	3
 95104	Suomen presidentinvaali 1968	3
 95105	Suomen presidentinvaali 1978	3
 95132	Galdr	3
 95171	Viipurin maalaiskunta	3
+95246	Ylimarkku	4
 95267	Manuale Aboense	2
 95276	Ravansaari	3
 95303	Giddyups	3
+95304	Noitalinna huraa!	4
+95318	Ähtävä	4
+95320	Öja	4
+95323	Riistavesi	4
+95326	Degerby	4
 95424	Alpo Rusi	3
 95494	Suomalainen kansanrunous	3
 95498	Daniel Juslenius	3
@@ -1598,6 +1937,7 @@ page_id	title	level
 100320	Aviisi	3
 100384	Puskuri (televisio-ohjelma)	3
 100470	Kotkatjärvi	3
+100472	Kikka	4
 100473	Mäkriä	3
 100494	Ville Niinistö	3
 100776	Backaksen kartano	3
@@ -1790,6 +2130,7 @@ page_id	title	level
 108795	Rekikylän kivikautinen asuinpaikka	1
 108891	Nosturi (Helsinki)	2
 108922	Suomi–Nicaragua-seura	3
+109013	Belomorskin piiri	4
 109087	Esko Ahonen	3
 109088	Susanna Haapoja	3
 109089	Lasse Hautala	3
@@ -1877,6 +2218,7 @@ page_id	title	level
 111374	Lockstedtin harjoitusjoukko	3
 111446	Puola-Solidaarisuus	1
 111680	Länsi-Helsingin lukio	2
+111714	Kantalahden piiri	4
 111856	Tikkurila (yritys)	3
 111880	Liekki-sonni	2
 111973	Garm	3
@@ -1946,6 +2288,7 @@ page_id	title	level
 118471	Maximilian Bayer	3
 118479	Kyyrölän seurakunta	2
 118508	Gunnar Nordström	3
+118573	Pihlajavesi	4
 118654	Toppilan rautatieasema	3
 118747	Huuma	3
 118810	Nikkeli (Murmanskin alue)	3
@@ -2036,6 +2379,7 @@ page_id	title	level
 124178	Kaikkien pyhien kirkko (Käkisalmi)	3
 124209	Käkisalmen luterilainen kirkko	3
 124237	Liike 88	2
+124462	Suomen Kristillisen Työväen Liitto	4
 124498	Pyhän Andreaksen kirkko (Käkisalmi)	3
 124522	Ulpu Iivari	3
 124524	Sirpa Paatero	3
@@ -2089,11 +2433,13 @@ page_id	title	level
 127500	Kaakkois-Suomi	3
 127556	Perlos	3
 128004	Gregorius Ekholm	3
+128021	Mannerheim-ristin ritarit	4
 128052	Loviisan–Vesijärven rautatie	2
 128159	Suomen presidentinvaali 2012	3
 128210	Oleg Viisas	3
 128327	Lauttasaaren välikohtaus	2
 128406	Viirit	2
+128805	Lokomo	4
 128844	Työmies	2
 128881	Pekka Räty	3
 128911	Taksvärkki	1
@@ -2109,6 +2455,7 @@ page_id	title	level
 129666	Marraskuun manifesti	2
 129675	Kielimanifesti	2
 129688	Suomen asutuksen yleisluettelo	0
+129863	Pohjaslahti	4
 129964	Seututie 847	2
 129990	Tellervo Maria Koivisto	3
 130020	August Langhoff	3
@@ -2124,6 +2471,7 @@ page_id	title	level
 130835	Brömsebron rauha	2
 130853	Suomen Kansanvaltuuskunnan Tiedonantaja	2
 131033	Olhavan rautatieasema	3
+131039	Porvoon maalaiskunta	4
 131120	Heikki Koski	3
 131322	Talonpoikaiskansan puolue	3
 131374	Maanviljelijäin puolue	3
@@ -2140,10 +2488,28 @@ page_id	title	level
 132477	Miettusen I hallitus	2
 132491	Finlayson	3
 132497	Jalo Lahdensuo	3
+132548	Hyvinkään maalaiskunta	4
+132549	Hämeenlinnan maalaiskunta	4
 132551	Kajaanin maalaiskunta	3
+132553	Lohjan kunta	4
+132554	Naantalin maalaiskunta	4
+132555	Nurmeksen maalaiskunta	4
+132556	Seinäjoen maalaiskunta	4
 132561	Uudenkaupungin maalaiskunta	3
+132571	Paraisten maalaiskunta	4
+132576	Äänekosken maalaiskunta	4
+132581	Iisalmen maalaiskunta	4
+132582	Ikaalisten maalaiskunta	4
+132585	Karjaan maalaiskunta	4
+132587	Kemijärven maalaiskunta	4
+132589	Lauritsala	4
+132606	Tiukka	4
+132607	Uudenkaarlepyyn maalaiskunta	4
+132615	Tammisaaren maalaiskunta	4
 132707	Tka8	3
+132743	Perustuslaillinen oikeistopuolue	4
 132777	Saaristolaivasto	1
+132931	Ahvenanmaa	4
 132973	Konrad Lehtimäki	3
 133186	Sosialistinen nuorisoliitto	3
 133310	Hämeenlinnan ortodoksinen seurakunta	3
@@ -2227,6 +2593,7 @@ page_id	title	level
 140420	Kymmenen virran maa	3
 140426	Pekka Aikio	3
 140481	Sallan–Kuusamon alue	2
+140555	Kurjenrahkan kansallispuisto	4
 140619	Dan Andersson	3
 140801	Poliisi-TV	3
 140971	Arvi Ahmavaara	3
@@ -2317,6 +2684,7 @@ page_id	title	level
 150679	Tampereen ortodoksinen kirkko	3
 151316	Juhani Arajärvi	3
 151342	Toivo Antila	3
+151344	Teno	4
 151358	Vaaran vuodet	2
 151382	Eero Antikainen	3
 151406	Pietari–Hiitola-rata	2
@@ -2344,6 +2712,7 @@ page_id	title	level
 153129	Luumäen linja-autoturma	3
 153147	Laukaan linja-autoturma	3
 153159	Käymäläseura Huussi	1
+153234	Valamo	4
 153340	Ruukku (lehti)	3
 153390	Frans Helminen	3
 153500	Kivisalmen linja-autoturma	3
@@ -2441,6 +2810,7 @@ page_id	title	level
 163422	Pirttikylän siltaturma	3
 163805	Eduard Dietl	3
 163895	Heikki Haavisto	3
+164022	Pielisjärvi	4
 164144	Kunnallisvaalit 1988	3
 164195	Teknopiste	3
 164429	VR:n makasiinit	2
@@ -2489,6 +2859,7 @@ page_id	title	level
 169972	Timo Järvilahti	3
 170224	Salmisaari	2
 170302	Sinikka Luja-Penttilä	3
+170887	Amerikansuomalaiset	4
 171004	Rölli – hirmuisia kertomuksia	3
 171107	Varsinaissuomalaiset	0
 171473	Leonard Pietari Tapaninen	3
@@ -2533,6 +2904,7 @@ page_id	title	level
 177882	Seppo Pelttari	3
 178189	Myrskylä Suomen sodassa	2
 178215	Carl Daniel von Haartman	3
+178238	Länsipohjalaiset	4
 178246	Kantatie 88	2
 178269	Eliel Soisalon-Soininen	3
 178496	Metsäsauna	1
@@ -2595,6 +2967,7 @@ page_id	title	level
 187266	Santeri Hirvonen	3
 187344	Aleksander Lampén	3
 187500	Valfrid Perttilä	3
+187501	Työväen pääneuvosto	4
 187502	Matti Airola	3
 187533	Porin lääni	2
 187734	Hilda Käkikoski	3
@@ -2683,6 +3056,7 @@ page_id	title	level
 196563	Orivirran saarto	1
 196784	Aarno Niini	3
 196920	Pernon lukio	2
+196982	Lahden Autokori	4
 197307	Suomen Siivet	2
 197500	Luettelo Salpalinjan korsuista	1
 197565	Neuvostoliiton partisaani-iskut Suomeen	3
@@ -2717,9 +3091,11 @@ page_id	title	level
 200503	Tupolevin veljekset	2
 200539	Setelinvaihto	1
 200541	Tammikuun valiokunta	3
+200594	Kemin piiri	4
 200602	Miekanhiontakivi	1
 200653	Nauvon keskiaikainen hylky	1
 200676	Salmi (Karjalan tasavalta)	3
+200759	Nykyiset kansanedustajat	4
 200769	Käkisalmen lääni	2
 200797	Axel Olof Freudenthal	3
 201187	Matti Aura (sitoutumaton)	3
@@ -2866,6 +3242,7 @@ page_id	title	level
 217614	Esa ja Vesa – auringonlaskun ratsastajat	3
 217725	Kytäjän kartano	1
 217806	Nestor Väänänen	3
+217888	Finnlines	4
 217949	I Hired a Contract Killer	3
 218376	Solea (lehti)	3
 218476	Siirtoväki	3
@@ -2932,6 +3309,7 @@ page_id	title	level
 227443	Johan Henrik Tawast	2
 227616	Ievan polkka	3
 227692	Yrjö Boije	3
+227799	Lestadiolaisuuteen liittyvät kiistat	4
 228163	Magnus Fredrik Tawast	3
 228170	Työn Ääni	2
 228271	Rautatievirasto	2
@@ -3013,6 +3391,7 @@ page_id	title	level
 241128	Ovi (lehti)	2
 241375	Artemi Verkolalainen	3
 241539	Jakob Magnus Sprengtporten	2
+241701	Suomen vaalipiirit	4
 241847	Messukylän rautatieasema	3
 241905	Suomen ja Neuvostoliiton hyökkäämättömyyssopimus	1
 242079	Kylpylähotelli Eden (Oulu)	2
@@ -3150,12 +3529,14 @@ page_id	title	level
 253864	Reino Häyhänen	3
 253890	Rikalan Linnamäki	2
 253893	Valhalla-seura	1
+253951	Timo T. A. Mikkonen	4
 253961	Sipoon vanha kirkko	3
 254616	Anna Kontula	3
 254675	Levänluhdan muinaisjäännökset	2
 255194	Malmin kirjakauppa	3
 255282	Donna Paukku	3
 255397	Kynämies	3
+255431	Oulun läänin pohjoinen vaalipiiri	4
 255623	Järvenpään tanssikeskus	1
 255715	Luettelo Neuvostoliiton Suomen-suurlähettiläistä	3
 255833	Mustiala	2
@@ -3208,9 +3589,11 @@ page_id	title	level
 264356	Boris Rybkin	3
 264372	Flygflottilj 19	2
 264392	Svenska frivilligkåren	2
+264432	Talvisodan vapaaehtoiset	4
 264765	Moottoritorpedovene Taisto	3
 264925	Pyhärukoukset	3
 265016	Pulmankijärvi	3
+265106	Talvisodan pommitukset	4
 265575	Eka	3
 265607	Ulrik (lentokenttä)	2
 265609	Veitsiluoto (lentokenttä)	2
@@ -3251,6 +3634,7 @@ page_id	title	level
 268465	Sortavalan lentoasema	2
 268477	Santahaminan lentoasema	2
 268479	Koiviston lentoasema	2
+268647	Anjala	4
 268689	Torpvikin lentotukikohta	2
 268690	Saltvikin lentotukikohta	2
 268691	Jungfrusundin lentoasema	2
@@ -3273,6 +3657,7 @@ page_id	title	level
 271271	Kansa-yhtymä	3
 271345	Inon linnake	3
 271459	Perussuomalaiset Nuoret	3
+271526	Basso Media	4
 271762	Yhdistys 9	3
 271771	Kuopion suomalainen tyttökoulu	3
 271799	Kuopion kaupungin työväen tyttökoulu	3
@@ -3338,6 +3723,7 @@ page_id	title	level
 278328	Kansan Ääni (1945)	2
 278340	Turku Air	2
 278393	Paavo Prokkonen	2
+278427	Jatkosodan hyökkäysvaihe	4
 278836	Kaapelitehdas	3
 279386	Onkamojärvi	3
 279468	Poika ja ilves	3
@@ -3902,6 +4288,7 @@ page_id	title	level
 324175	Kloogan leiri	2
 324180	Juho Jännes	2
 324366	Vanhainkoti Aurinko	3
+324483	Suomen venäläiset	4
 324595	Pohjois-Karjala-projekti	3
 324620	Jutta Zilliacus	3
 324623	Jaakko Syrjä	3
@@ -4123,6 +4510,7 @@ page_id	title	level
 335417	Martinniemen saha	3
 335508	Otto Stenroth	3
 335546	Särimner	3
+335604	Strömberg	4
 335718	Juho Kirves	3
 335722	Kauko Jämsén	3
 335806	Yön saalistajat (vuoden 1984 suomalainen elokuva)	3
@@ -4162,6 +4550,7 @@ page_id	title	level
 338429	Rakkaudella, Maire	3
 338545	Finlaysonin sähkörata	2
 338551	Forssan sähkörata	2
+338564	Suomen puolueet	4
 338587	Honkataipaleen rata	2
 338607	Jämsänkosken tehdasrata	2
 338613	Keramian teollisuusrata	2
@@ -4171,6 +4560,7 @@ page_id	title	level
 338625	Seikun sahan kapearaiteinen rautatie	2
 338629	Virkkalan–Ojamon rautatie	2
 338637	Kaj Bärlund	3
+338712	Kalterijääkärit	4
 338796	Hugo Rautapää	3
 338817	Askr ja Embla	3
 338953	Juho M. Korhonen	3
@@ -4307,6 +4697,7 @@ page_id	title	level
 348827	Kirsti Hollming	3
 349095	Heinäsaaret	2
 349316	Minna Karhunen	3
+349376	DNA (yritys)	4
 349468	Lammin reservikomppania	2
 349574	Emanuel Pohjaväre	3
 349591	Olavi Lähteenmäki	3
@@ -4560,6 +4951,7 @@ page_id	title	level
 368799	Oulunsalon kunnantalo	3
 369080	Operaatio Nordwind (1941)	2
 369101	Ajanlaskukiista (Suomen ortodoksinen kirkko)	2
+369137	Yleisurheilu kesäolympialaisissa 1952	4
 369559	Suur-Ii	2
 369644	Luettelo Suomen ilmatorjunnan kalustosta talvi- ja jatkosodassa	1
 369869	Rahan historia Suomessa	1
@@ -4639,6 +5031,7 @@ page_id	title	level
 378610	Rajamäen tehtaat	2
 379044	Ulkoministeriön kansainvälisten asiain valmennuskurssi	2
 379229	KesäQ	3
+379287	Paini kesäolympialaisissa 1952	4
 379337	Chymos	3
 379344	Petroskoin maneetti	3
 379493	Tupoksen seisake	3
@@ -4680,12 +5073,14 @@ page_id	title	level
 384983	Nuutajärven lasitehdas	2
 385056	Antti Louhisto	3
 385190	Mäntyharjun kanava	2
+385426	Vantaan vesitornit	4
 385500	Kelloselän rautatieasema	3
 385579	Ahtium	3
 385770	Toivo (fregatti)	2
 385799	Raid over Moscow	2
 385815	Noisniemi	3
 386038	Toivo Pohjala	3
+386197	Karunki	4
 386253	Santeri Haapanen	3
 386257	Juhani Alaranta	3
 386259	Palta Oy:n linjavaihde	3
@@ -4732,6 +5127,7 @@ page_id	title	level
 392179	Luettelo Suomen kirkkopaloista	1
 392198	Lauri Palmunen	3
 392412	Tauno Iisalo	3
+392456	Ammunta kesäolympialaisissa 1952	4
 392720	Samola	3
 392786	Helsingin suomalainen tyttökoulu	3
 392798	Johan Matthias Sundwall	3
@@ -4910,6 +5306,7 @@ page_id	title	level
 409699	Osakeantimerkki	2
 409737	Viljo Pousi	3
 409807	Oulun Wiikko-Sanomia	2
+409810	Työväen ja pienviljelijäin sosialidemokraattinen liitto	4
 409944	Ahokas	3
 409950	Haankylä	3
 409952	Tarjoustalo	3
@@ -4952,6 +5349,7 @@ page_id	title	level
 411470	Pauli Tuorila	3
 411473	Arvi Malmivaara	3
 411547	Orlochlessin torni	2
+411772	Uinti kesäolympialaisissa 1952	4
 411851	Lappi (Ruotsi)	2
 411973	Jussi Lappi-Seppälä	3
 412008	Väinö Kallio	3
@@ -5005,6 +5403,7 @@ page_id	title	level
 415112	Kuhmon Vieksin varhainen pulakapina	1
 415351	Vasili Suosaari	3
 415649	Kaltimon pahvitehdas	2
+415678	Suomen kommunistinen puolue	4
 415711	Kissakoski (yritys)	2
 415827	Suomen merimuseo	3
 415854	Niilo A. Mannio	3
@@ -5111,6 +5510,7 @@ page_id	title	level
 429376	Tuuli Reijonen	3
 429688	Nils Abraham af Ursin	3
 429746	Ulkomaalaisen omaisuuden hoitokunta	1
+429758	Tradeka	4
 429796	Kiiskilahti	3
 429812	Toivo Kuisma	3
 429845	Kemijärven sellutehdas	3
@@ -5126,6 +5526,7 @@ page_id	title	level
 430676	Veikko Wainio	3
 430717	Alfred Hyytinen (jääkäri)	3
 430749	Matti Nykänen (jääkäri)	3
+430791	Miekkailu kesäolympialaisissa 1952	4
 430793	Max Kronqvist	3
 430810	Teppo Takala	3
 430859	Paavo Kinnunen (jääkäri)	3
@@ -5337,6 +5738,7 @@ page_id	title	level
 453880	Ylä-Urpala	3
 453945	Vega (kuunari)	2
 454005	Kertomuksia kaatopaikalta	3
+454045	Valtatien 4 historia	1
 454096	Revonlahden taistelu	2
 454112	S/S Achill	2
 454114	M/S Ceres	3
@@ -5724,6 +6126,7 @@ page_id	title	level
 498935	Emil Kvick	3
 499352	Äyräpäänjärvi	3
 499532	M/S Karelia	3
+499973	Hassisen Kone	4
 500212	Säätyvaltiopäivät 1897	2
 500487	Per von Bonsdorff	3
 500530	Gabriel von Bonsdorff	3
@@ -5853,6 +6256,7 @@ page_id	title	level
 515484	Säätyvaltiopäivät 1882	2
 515486	Säätyvaltiopäivät 1888	2
 515504	Säätyvaltiopäivät 1905	2
+515522	Suomen suuriruhtinaskunnan maamarsalkat	4
 515535	Yleinen valitusvaliokunta	2
 515762	Kymenkartanon lääni	2
 515906	Vuoden 1906 valtiopäiväjärjestys	2
@@ -5920,6 +6324,7 @@ page_id	title	level
 527241	Jalkapallo kesäolympialaisissa 1952	3
 527333	Paavo Ruotsalainen (kirjailija)	3
 527553	Mansikka-ahon koulu	2
+527797	Koripallo kesäolympialaisissa 1952	4
 528318	Godbyn taistelut	2
 528414	Vennamolaisuus	2
 528550	Demo Finland	3
@@ -5930,9 +6335,12 @@ page_id	title	level
 529390	Kuopio Innovation	2
 529568	Maahockey kesäolympialaisissa 1952	3
 529742	Arvid Mörne	3
+529963	Melonta kesäolympialaisissa 1952	4
+530085	Nykyaikainen viisiottelu kesäolympialaisissa 1952	4
 530104	Kustaa Rovio	3
 530108	Antti Kiviranta	3
 530110	Aleksanteri Vasten	3
+530122	Nyrkkeily kesäolympialaisissa 1952	4
 530128	Jalmar Lehtimäki	3
 530136	Kyröskosken taistelu	2
 530140	Vaskiveden taistelu	2
@@ -5945,6 +6353,7 @@ page_id	title	level
 531079	Oskar Sundman	3
 531165	Kiljusen herrasväki (elokuva)	3
 531169	Tulitikkuja lainaamassa (vuoden 1980 elokuva)	3
+531356	Painonnosto kesäolympialaisissa 1952	4
 531357	Hannes Uksila	3
 531419	Anton Uotinen	3
 531422	Emil Vaateri	3
@@ -5954,6 +6363,8 @@ page_id	title	level
 532328	Aarne Varonen	3
 532850	Viialan kartano	2
 532868	Paul Wallenius	3
+532890	Purjehdus kesäolympialaisissa 1952	4
+532937	Pyöräily kesäolympialaisissa 1952	4
 533190	Hollolan rovastikunta	3
 533223	Herpmanin veljekset	3
 533232	Domna Huovinen	3
@@ -5999,6 +6410,7 @@ page_id	title	level
 537863	Voikkaan lakko 1904	2
 537942	Artjärven neljänneskunta	3
 538055	Kunnallisvaalit 1936	3
+538157	Ratsastus kesäolympialaisissa 1952	4
 538236	Vaihtoehto EU:lle Tiedotuskeskus	3
 538299	Kulosaaren huvilakaupunki	2
 538316	Finnoil	3
@@ -6011,10 +6423,13 @@ page_id	title	level
 538512	Hallintopitäjä	3
 538958	Delta (suunnistusseura)	2
 539488	Kuninkaantuomio	1
+539538	Soutu kesäolympialaisissa 1952	4
 539539	Kalle Mata	3
+539561	Uimahypyt kesäolympialaisissa 1952	4
 540216	Jatkosodan jälkeinen kirjasensuuri Suomessa	2
 540387	Vesipallo kesäolympialaisissa 1952	3
 540688	Tony Asumaa	3
+541172	Voimistelu kesäolympialaisissa 1952	4
 541254	Savonlinnan ja Kymenkartanon lääni	3
 541255	Savon ja Karjalan lääni	3
 541575	Urho Kähönen	3
@@ -6093,6 +6508,7 @@ page_id	title	level
 544995	Kolosjoen kaivos	2
 545130	Johannes Väisänen	3
 545149	Directa	3
+545366	Kommunismi Suomessa	4
 545436	Sunborn Princess	2
 545608	Liinahamarin reitti	2
 545814	Saloisten historia	3
@@ -6627,6 +7043,7 @@ page_id	title	level
 580014	Juho Jaakonsaari	3
 580024	Arno Jaatinen	3
 580104	Arvo Jankko	3
+580157	Rovio	4
 580158	Hopeamarkka	1
 580190	Kaarlo Kaarlonen	3
 580219	Huugo Kahva	3
@@ -6886,6 +7303,7 @@ page_id	title	level
 606149	Paratiisin lapset	3
 606164	Eino Jokirinta	3
 606173	Tauno Juvonen	3
+606191	Aunuksen kuvernementti	4
 606557	Oskar Karlsson	3
 606622	Suomen aluemuutokset	0
 606926	Draugr	3
@@ -7231,6 +7649,7 @@ page_id	title	level
 640243	Raimo Liikkanen	3
 640247	Suomen sisällissodan terrori	3
 640252	Pohjois-Suomen sotilaslääni	3
+640254	Itä-Suomen sotilaslääni	4
 640456	Veikko Kansikas	3
 640709	Matti Pelttari	3
 640711	Raimo Vuoristo	3
@@ -7406,6 +7825,7 @@ page_id	title	level
 655494	Johannes Longi	3
 655518	Kustaa Loukola	3
 655524	Einari Karvetti	3
+656427	Aseistakieltäytyminen Suomessa	4
 656437	Pohjalaisia (näytelmä)	2
 657109	Viipurin konepaja	2
 657300	Akaa (Suomen entinen kunta)	2
@@ -7467,6 +7887,7 @@ page_id	title	level
 667492	M. E. Lehtinen	3
 667580	Naantalin jalostamo	2
 667701	Juhana Salonen	3
+667899	Arkangelin kuvernementti	4
 667992	Suomen Gummitehdas	3
 668120	Julius Gyllenhielm	3
 668214	Reino Mikkonen	3
@@ -7512,6 +7933,7 @@ page_id	title	level
 673691	Museo Torpin Tykit	2
 673848	Ahola (Järvenpää)	2
 674154	Kruununmetsä	1
+674193	Suomen Työväenpuolue (2006)	4
 674575	Kosti Mustonen	3
 674662	Kulkurin taivas	3
 674760	Viipurin ja Haminan konsistorit	2
@@ -7648,6 +8070,7 @@ page_id	title	level
 682615	Inarijärven ohjus	3
 682865	Santeri Mäkelä	3
 683166	Jussi Närvänen	3
+683228	Suomen turkkilaiset	4
 683486	Eufex	3
 683834	Yrjö Länsipuro	2
 683941	Albert Brommels	3
@@ -7950,6 +8373,7 @@ page_id	title	level
 717404	Silmäasema	3
 717416	Aito Keravuori	3
 717467	Usko Haahti	3
+717616	Lentoryhmä Sarko	4
 717760	Karjalan jääkäriprikaati	2
 717779	Karjalan pedagoginen akatemia	3
 717910	Jyväskylän kaupungintalo	3
@@ -7968,6 +8392,7 @@ page_id	title	level
 720809	K. J. Ståhlbergin kyyditys	2
 720824	Laillisuusrintama	2
 720829	Isänmaan ja Lain Puolesta	1
+720906	Suomen kansallissymbolit	4
 721278	Alfhild (prinsessa)	3
 721555	Käräjäkunta	2
 721745	Sotilasnimi	1
@@ -8038,6 +8463,7 @@ page_id	title	level
 730629	Hietalahden telakka	3
 731205	Avia Tower	2
 731403	Dunderbergin konepaja	2
+731496	Joutsen Media	4
 731583	Matias Kettilmundinpoika	1
 731662	S/S Luna	2
 731725	Markovilla	3
@@ -8551,6 +8977,7 @@ page_id	title	level
 793243	Matematiikkakonekomitea	2
 793325	Rafael Hakkarainen	2
 793853	Iin rovastikunta	3
+794373	Näin koulutat lohikäärmeesi	4
 794430	Musa (lehti)	2
 794547	Kämnerinoikeus	2
 795160	Kansallisarkiston Hämeenlinnan toimipaikka	3
@@ -9661,6 +10088,7 @@ page_id	title	level
 943823	Lepra Suomessa	2
 943924	Piritta (ravintola)	2
 944081	Johan Philip Palmén	3
+944108	Suomen läänien vaakunat	4
 944285	Anni Lehtonen	3
 944511	Fridolf Gustafsson	3
 944518	Reinhold Hedberg	3
@@ -10040,6 +10468,7 @@ page_id	title	level
 995550	Potopia	2
 995590	Pauli Huhtala	3
 995913	Hannulan herätys	1
+995940	Otava-konserni	4
 996004	Russian Memorial	1
 996256	Talvivaaran kaivos	2
 996455	Perjantai-illan unelma	3
@@ -10048,6 +10477,7 @@ page_id	title	level
 996992	Juho Malkamäki	3
 997157	Kauppatorin Apteekki	2
 997401	Saamelaisten historia	2
+997402	Saamelainen kulttuuri	4
 997707	Saamelaisten kansanpuolue	3
 997717	Kaupunkisaamelainen	3
 997812	Täyssinä	2
@@ -10699,6 +11129,7 @@ page_id	title	level
 1066350	Carl Pehr Edvard Gadd	3
 1066352	Alexander Gadolin	3
 1066393	Gustaf Gadolin	3
+1066658	Sibelius-Akatemia	4
 1066686	Elin Sjöström	3
 1066715	Jaakko Geet	3
 1066762	Kirkkokylä	1
@@ -11973,6 +12404,7 @@ page_id	title	level
 1171434	Luulajansaamelaiset	3
 1171460	Trinet	3
 1171500	Femitex	3
+1171538	Kiltinänsaamelaiset	4
 1171539	Turjansaamelaiset	3
 1171556	Terinit	3
 1171773	Suomen ilmatilan loukkaukset	2
@@ -11997,6 +12429,7 @@ page_id	title	level
 1172579	Kaitila (yritys)	3
 1172620	Säräisniemen keramiikka 1	1
 1172731	Porin palo 1852	2
+1172818	Jatkosodan vastarintaliike	4
 1173217	Musiikin Ääni	2
 1173230	Knut Gustaf Nikolai Borgenström	2
 1173300	Laukolan majurien juttu	2
@@ -12802,6 +13235,7 @@ page_id	title	level
 1264197	Jussi Montonen	3
 1264414	Lomamatka 80-luvulle	3
 1264574	Pohjolan Maito	2
+1264726	Pohjanmaa	4
 1264883	Pekanpään seisake	3
 1264885	Kainuunkylän rautatieasema	3
 1264888	Armassaaren laituri	3
@@ -13612,6 +14046,7 @@ page_id	title	level
 1320456	Panu Toivonen (poliitikko)	3
 1320604	Reitkallin puutarhakoulu	2
 1320672	Sorkkinen	3
+1320873	Pietarinsaksalaiset	4
 1321069	Uudenkaupungin telakka	2
 1321079	Silfverbergin & Wecksellin Yhdistetyt Hattutehtaat	2
 1321138	Oulun Kauppahotelli	2
@@ -14221,6 +14656,8 @@ page_id	title	level
 1358886	Tähti (puoluelehti)	3
 1358892	Kristillinen Työkansa	3
 1358913	Jäknabackenin jätinkirkko	2
+1358914	Valkoinen terrori	4
+1358920	Punainen terrori	4
 1358975	Kejsmolandsbackenin jätinkirkko	2
 1358979	Lapponia (kirja)	2
 1359335	Leo Skurnik	3
@@ -14743,6 +15180,7 @@ page_id	title	level
 1401161	Perusluottokortti	3
 1401244	Palkansaajasäätiö	2
 1401247	Turun isku 2017	2
+1401270	Heili-kirjastot	4
 1401305	Kuhmoisten taistelu	2
 1401350	Nivalan vesitorni	3
 1401444	Kuusankosken Sanomat	2
@@ -15422,6 +15860,7 @@ page_id	title	level
 1477756	Tampereen kaupunginmuseo	2
 1478062	Järvi-Pohjanmaan rovastikunta	3
 1478064	Rieksin tapettitehdas	3
+1478259	Suomen saksalaiset	4
 1478396	Turun verkatehdas	2
 1478539	Seutu-Sanomat	2
 1478647	Rakennustoimisto S. A. Tervo	3
@@ -15495,6 +15934,7 @@ page_id	title	level
 1486091	Toppolanmäki	1
 1486136	Kjisik (yritys)	2
 1486231	Helsinki Forum	2
+1486304	Äärivasemmisto Suomessa	4
 1486305	Varisverkosto	3
 1486443	Lars Väinö Lundahl	3
 1487005	S. A. Sohlman	3
@@ -16302,6 +16742,7 @@ page_id	title	level
 1579725	Turun Kivipaino	2
 1579835	Torma	3
 1580008	Kuopion vankileiri	2
+1580103	Saksansuomalaiset	4
 1580135	Kaasmarkun verkatehdas	3
 1580568	Johan Sundwall	3
 1580574	Hovinkylä	3
@@ -16383,6 +16824,7 @@ page_id	title	level
 1585505	Simon Lindheim	3
 1585562	Keski-Savon Jätehuolto	3
 1585577	Riikinnevan jätekeskus	3
+1585614	Pohjois-Karjalan sosiaali- ja terveyspalvelujen kuntayhtymä	4
 1585670	Karl Adolf Hellén	3
 1585749	Fides (parkki)	2
 1585821	Muuruveden kotiseutumuseo	3
@@ -16457,6 +16899,7 @@ page_id	title	level
 1590586	Viktor Jevsejev	2
 1590593	Suomalainen Sotilaskäsikirja	3
 1590854	Viktor Alexander af Forselles	3
+1591081	Karjala (kunta)	4
 1591511	Ihana aamu (tv-ohjelma)	3
 1591677	Yksi kamari – kaksi sukupuolta	1
 1591758	Pitäjäntupa-museo (Hirvensalmi)	3
@@ -16637,6 +17080,9 @@ page_id	title	level
 1611628	Karl Viktor de la Chapelle	2
 1611651	Karl Leonard Schulman	3
 1611696	Karl Magnus Holm	2
+1611774	Altersundetin vesistö	4
+1611779	Luulajanjoen vesistö	4
+1611790	Piitimenjoen vesistö	4
 1611880	Ingigerdin hautakivi	1
 1611973	Hiidensaaren luonnonsuojelualue	3
 1612100	Gustaf Svinhufvud (laamanni)	2
@@ -17077,6 +17523,7 @@ page_id	title	level
 1643515	Kruunuhäät	2
 1643555	Maaherrantien silta	2
 1643614	Tissit ja tango	3
+1643653	Nummi (Lohja)	4
 1643805	Kapellbacken	2
 1643924	Simon Weck	2
 1643929	Kaupunkisinfonia	3
@@ -17102,6 +17549,7 @@ page_id	title	level
 1645114	Herman Maximilian Molander	2
 1645117	Carl von Schoultz	2
 1645144	Kotkamerkki	0
+1645351	Saari (kunta)	4
 1645378	Taavi Pohjanpalo	2
 1645403	Karjalohjan seurakunta	3
 1645406	Sammatin seurakunta	3
@@ -17178,6 +17626,7 @@ page_id	title	level
 1648428	Johan Henrik von Schrowe	2
 1648433	Fredrik Magnus Stackelberg	2
 1648636	Napialan nahkatehdas	2
+1648676	Suomen merivartiolaitos	4
 1648808	Lahdensillan taistelun muistomerkki	2
 1648846	Antinkankaan seisake	3
 1648847	Lappasen seisake	3
@@ -17450,6 +17899,9 @@ page_id	title	level
 1676687	Ankkapurhan kivikautinen asuinpaikka	1
 1676691	Pajarin kivikautinen asuinpaikka	1
 1676741	Pärnänjoki	3
+1676829	Etelä-Karjalan hyvinvointialue	4
+1676839	Lapin hyvinvointialue	4
+1676848	Pohjois-Karjalan hyvinvointialue	4
 1676858	Koponinjoki	2
 1676991	Vahvajärvi (Sortavalan piiri)	3
 1677004	Hiijärvi (Sortavalan piiri)	3
@@ -17616,6 +18068,7 @@ page_id	title	level
 1691664	Tullimylly	2
 1691793	Georg Erik Grotenfelt	2
 1691822	Anni Marttinen	3
+1691912	Anarkismi Suomessa	4
 1691941	Johannes Amatus Thesleff	3
 1692029	Finnreklama	3
 1692740	Höytiäisen järvenlasku	2
@@ -18148,6 +18601,7 @@ page_id	title	level
 1751236	Voronka (Vienanmeri)	3
 1751406	Metsävainikka	2
 1751512	Espoon siltaonnettomuus	2
+1751521	Paavola (kunta)	4
 1751784	Nootti (lehti)	2
 1751855	Osasto Kilpi	3
 1752002	Kangasalan lastenkoti	2
@@ -18375,6 +18829,7 @@ page_id	title	level
 1779267	Alppilan seurakunta	3
 1779276	Latokartano (yleiskäsite)	1
 1779524	Väinämöinen – Suomalaisten runojen keskushahmo	3
+1779542	Pyhä Olavi	4
 1779665	Kruunuvuorenrannan lautta	3
 1780013	Maantieteellis-historiallinen menetelmä	3
 1780106	Turun suojeluskuntapiiri	2
@@ -18929,8 +19384,11 @@ page_id	title	level
 1857736	Luettelo Suomen kotiseutumuseoista	3
 1857757	Lehtisaaren ostoskeskus	3
 1858049	Suomen lähetyskunnan vaalit 1808	2
+1858608	Etelä-Karjalan urheilu	4
 1858642	Tikkurila–Porvoo-rata	2
+1858686	Pohjois-Karjalan urheilu	4
 1858802	Kuopion alueliitokset	2
+1858840	Lapin urheilu	4
 1859464	Siekkilän koulu	2
 1859795	Pääkaupungin siirto Turusta Helsinkiin	1
 1859797	Anders Kocke	3
@@ -19132,6 +19590,7 @@ page_id	title	level
 1896527	Jamera	2
 1897017	Kampin vanha linja-autoasema	2
 1897091	Lahden Kunnallislehti	2
+1897374	Suomen rautateiden museosillat	4
 1897416	Valkoinen vappu	2
 1897892	Vanha herraskartano	3
 1898022	Paul Sonny	2
@@ -19210,6 +19669,8 @@ page_id	title	level
 1912059	Suomalaiset kansallispuvut	3
 1912173	Kakkurin korsu	3
 1912346	Fredrik von Ehrenheim	3
+1912501	Kahdet kasvot (vuoden 1987 elokuva)	3
+1912505	Valo varjon takaa	3
 1912753	Metsälän paloittelumurha	2
 1912782	Heinäluodon majakka	3
 1912872	Järvenpään kotitalousopettajaopisto	2
@@ -19289,3 +19750,6 @@ page_id	title	level
 1924077	Lauttasaaren kasino	2
 1924335	Miehennevan jätinkirkko	2
 1924338	Pirttihaudankankaan jätinkirkko	2
+1924729	Kevyt osasto 1 (jatkosota)	1
+1924767	Viikinkiaika Virossa	2
+1924855	Kusitorni	2
