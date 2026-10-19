@@ -12,7 +12,7 @@ even when the answer is only written in another language. Then let an AI model w
 answer that cites those articles.
 
 Everything runs on a laptop: MariaDB stores the articles **and** their vectors in the same
-database, and one SQL statement does the semantic search. No separate vector database.
+database, and one SQL statement does the semantic search. No separate vector database — vectors are native in MariaDB.
 
 ![The search page: an English question finds the right treaty, with its Finnish and Swedish versions](docs/search-page.jpg)
 
