@@ -108,8 +108,9 @@ Details and how each was measured: step 8 and *Numbers*.
 - **Which text:** [FineWiki](https://huggingface.co/datasets/HuggingFaceFW/finewiki) (August
   2025). Clean Markdown made from Wikipedia's rendered pages: templates filled in, no wiki markup
   noise. Raw wikitext would put `{{Infobox …}}` and reference syntax into the vectors.
-- **Why not the live Wikipedia API:** fresher, but 28,000 requests at the venue's shared IP hits
-  Wikipedia's rate limit, and we promised Wikimedia Suomi not to load their servers.
+- **Why not the live Wikipedia API:** fresher, but 28,000 requests run into Wikipedia's rate
+  limit (200 requests a minute per IP address), and a bulk job like this belongs on the published
+  dumps, not on Wikimedia's live servers.
 
 ### The model: bge-m3
 
@@ -119,7 +120,7 @@ We embed with [BAAI/bge-m3](https://huggingface.co/BAAI/bge-m3), run locally thr
 Why this one, for this use case:
 
 - **Three languages in one space.** It is multilingual (100+ languages), so an English question
-  and a Finnish article land close together. Cross-language search is the point of dataset S.
+  and a Finnish article land close together. Cross-language search is the point of this demo.
 - **Tested on Wikipedia, including Finnish.** Its paper reports results on
   [MIRACL](https://github.com/project-miracl/miracl), a retrieval benchmark built from Wikipedia
   in 18 languages, Finnish among them — the closest public test to what we do.
@@ -132,7 +133,7 @@ Why this one, for this use case:
 - **Long input: up to 8,192 tokens.** Most articles fit whole, which is what lets us embed whole
   articles (next section).
 - **Open and local.** MIT licence, ~570 M parameters, runs on an M4 laptop. No API key, no cost,
-  no text leaves the machine — and every team at the hackathon can run the same model.
+  no text leaves the machine — and anyone following this tutorial can run the same model.
 - **Easy to install.** `ollama pull bge-m3` — no PyTorch or Python ML stack needed. Any language
   that can make an HTTP call can embed a question.
 
@@ -144,12 +145,12 @@ Models we did **not** choose:
 | [multilingual-e5-large](https://huggingface.co/intfloat/multilingual-e5-large) | Good multilingual model, but reads only **512 tokens** — about one paragraph — so whole articles would be cut off after the first paragraph. Fine if we chunk. |
 | [EmbeddingGemma-300m](https://huggingface.co/google/embeddinggemma-300m) | As good as bge-m3 in the test above, smaller and faster. But it reads only **2,048 tokens**, so long articles would be cut off. A strong choice if we chunk — worth testing in step 8. |
 | [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) | The common tutorial default. Fast and small, but English-only and reads at most 256 tokens. |
-| OpenAI `text-embedding-3` / Cohere Embed v3 | Good quality, but need an API key and cost money per call, and the text leaves the laptop. Not something we can ask 30 teams to depend on. |
+| OpenAI `text-embedding-3` / Cohere Embed v3 | Good quality, but need an API key and cost money per call, and the text leaves the laptop. Not something a free, local tutorial should depend on. |
 
 Newer models score higher on the [MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard)
 (for example [Qwen3-Embedding-0.6B](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B)). bge-m3 is
 the safer default: widely used, well documented, tested on Finnish Wikipedia. Swapping the model
-is one setting; comparing two models is a good hackathon project in itself.
+is one setting; comparing two models is a good project in itself.
 
 ### What we vectorize: the whole article (for now)
 
@@ -185,7 +186,7 @@ allows it (see step 2).
   The first version is search only.
 - **Ask** (step 7, later) gives one answer to one question, with sources. That is the "G" in RAG
   and what people expect to see.
-- **No multi-turn chat.** Keeping a conversation adds code and nothing about MariaDB. Teams can
+- **No multi-turn chat.** Keeping a conversation adds code and nothing about MariaDB. You can
   add it.
 
 ### Where things run (Mac M4)
@@ -583,7 +584,7 @@ Same question, 3 runs, fastest shown:
 | **Language preference** | Measure it, then try: one result per topic (next row), or a fixed number of results per language | Seen in practice: English questions get mostly English and Swedish articles, Finnish questions Finnish and Swedish. Cross-language works, but the question's own language wins |
 | **One result per topic** | Group by `wikidata_id` so fi, en and sv versions of the same article count as one result | Fewer near-duplicate results |
 | **Filters** — *language and category done* | Article length, edit date (`date_modified`), links | More SQL next to the vector search |
-| **Embedding speed** | Batch size · Ollama's `num_ctx` and `OLLAMA_NUM_PARALLEL` · sentence-transformers on the Apple GPU instead of Ollama | Time to embed everything — matters for the hackathon teams, who have 48 hours |
+| **Embedding speed** | Batch size · Ollama's `num_ctx` and `OLLAMA_NUM_PARALLEL` · sentence-transformers on the Apple GPU instead of Ollama | Time to embed everything — ~5 hours now; matters for anyone embedding their own data or a bigger set |
 
 **Hybrid search with Reciprocal Rank Fusion.** Full-text and vector search give scores that
 cannot be compared — a `MATCH` relevance and a cosine distance are different units. RRF ignores
@@ -624,19 +625,16 @@ exact terms. *(Hybrid: to do.)*
 | First search after a cold start | ~1.6 s (Ollama loads the model); then ~60 ms |
 | Keyword search (`FULLTEXT`) | ~25 ms |
 
-## Sharing it
+## What is where
 
-Suggestion, from least to most work:
-
-1. **This repo** — code + tutorial. Anyone can clone and follow it. Data under CC BY-SA; code
-   licence to be decided.
-2. **The data:** the articles and categories are in this repo (`data/`, 56 MB). The vectors
-   (110 MB) are files in the
-   [`data-v1` release](https://github.com/robertsilen/mariadb-vector-wikipedia-rag/releases/tag/data-v1);
-   `python load.py --vectors` downloads and loads them. This
-   *is* dataset S for the hackathon: teams skip the embedding and search in minutes.
-3. **`docker compose up` for everything except Ollama** — MariaDB pre-loaded with the dump, plus the
-   web page. Ollama stays on the host for GPU speed.
+- **Code and tutorial:** this repo. Clone it and follow the steps, or run `./setup.sh`.
+- **Articles and categories:** in this repo, `data/` (56 MB).
+- **Vectors:** 110 MB, too big to keep comfortably in git, so they are files in the
+  [`data-v1` release](https://github.com/robertsilen/mariadb-vector-wikipedia-rag/releases/tag/data-v1).
+  `python load.py --vectors` downloads and loads them — you can search in minutes instead of
+  embedding for five hours.
+- **MariaDB** runs in Docker (`docker-compose.yml`) or is your own. **Ollama** always runs on your
+  machine, so it can use the GPU.
 
 ## Open questions
 
