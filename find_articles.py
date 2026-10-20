@@ -21,7 +21,7 @@ LEVELS = 3      # how many levels of subcategories to follow (3 gives about 19,0
 PAUSE = 0.4     # seconds between requests, to stay under Wikipedia's 200 requests/minute
 
 session = requests.Session()
-session.headers["User-Agent"] = "mariadb-vector-wikipedia-rag/1.0 (https://github.com/robertsilen/mariadb-vector-wikipedia-rag)"
+session.headers["User-Agent"] = "mariadb-vector-wikipedia-rag/1.0 (https://github.com/MariaDB/mariadb-vector-wikipedia-rag)"
 
 
 def api_all(params, key):

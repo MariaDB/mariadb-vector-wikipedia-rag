@@ -21,7 +21,7 @@ Wikipedia (a small dataset relative to the entire Finnish Wikipedia of over 500k
 29,460 articles — 19,285 Finnish, and the 5,254 English and 4,921 Swedish articles on the same
 topics. 2,919 topics exist in all three languages.
 
-Its companion, [mariadb-system-versioning-wikipedia](https://github.com/robertsilen/mariadb-system-versioning-wikipedia),
+Its companion, [mariadb-system-versioning-wikipedia](https://github.com/MariaDB/mariadb-system-versioning-wikipedia),
 keeps every version of these articles in a system-versioned table: what did Wikipedia say on a
 given day?
 
@@ -30,7 +30,7 @@ given day?
 You need Python 3.11+, [Ollama](https://ollama.com/download) running, and Docker. Then:
 
 ```bash
-git clone https://github.com/robertsilen/mariadb-vector-wikipedia-rag.git
+git clone https://github.com/MariaDB/mariadb-vector-wikipedia-rag.git
 cd mariadb-vector-wikipedia-rag
 ./setup.sh                  # packages, the bge-m3 model, MariaDB in Docker, data and vectors
 .venv/bin/python app.py     # the search page: http://localhost:8000
@@ -649,7 +649,7 @@ exact terms. *(Hybrid: to do.)*
 - **Code and tutorial:** this repo. Clone it and follow the steps, or run `./setup.sh`.
 - **Articles and categories:** in this repo, `data/` (57 MB).
 - **Vectors:** 119 MB, too big to keep comfortably in git, so they are files in the
-  [`data-v2` release](https://github.com/robertsilen/mariadb-vector-wikipedia-rag/releases/tag/data-v2)
+  [`data-v2` release](https://github.com/MariaDB/mariadb-vector-wikipedia-rag/releases/tag/data-v2)
   (`data-v1` holds the first version, without the named categories).
   `python load.py --vectors` downloads and loads them — you can search in minutes instead of
   embedding for five hours.
